@@ -1,0 +1,34 @@
+{
+  "name": "rust-agentic-skills",
+  "version": "1.1.2",
+  "description": "Rust development skills with compiler diagnostics and focused specialist guidance.",
+  "author": {
+    "name": "Rust Agentic Skills Contributors"
+  },
+  "repository": "https://github.com/udapy/rust-agentic-skills",
+  "license": "MIT",
+  "keywords": [
+    "rust",
+    "skills",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Rust Agentic Skills",
+    "shortDescription": "Build and debug Rust projects.",
+    "longDescription": "Use focused Rust skills and an MCP server for compiler error explanations.",
+    "developerName": "Rust Agentic Skills Contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/udapy/rust-agentic-skills",
+    "defaultPrompt": [
+      "Help me fix this Rust compiler error.",
+      "Review this Rust code for safety and clarity.",
+      "Create a pest parser for this grammar."
+    ]
+  }
+}

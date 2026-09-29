@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "rust-guardian": {
+      "command": "./run_rust_guardian.sh",
+      "enabled": true,
+      "startup_timeout_sec": 120
+    }
+  }
+}

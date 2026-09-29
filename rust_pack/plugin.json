@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rust-agentic-skills",
+  "version": "1.1.2",
+  "description": "Rust development skills with compiler diagnostics and focused specialist guidance.",
+  "author": {
+    "name": "Rust Agentic Skills Contributors"
+  },
+  "repository": "https://github.com/udapy/rust-agentic-skills",
+  "license": "MIT",
+  "keywords": [
+    "rust",
+    "skills",
+    "mcp"
+  ]
+}
