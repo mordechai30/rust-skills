@@ -1,0 +1,362 @@
+url	status_or_purpose	title	sha256_of_reader_response
+https://abseil.io/resources/swe-book/html/ch12.html	retrieved	Software Engineering at Google	2fd68eaefaec352556017bada423f2b354fd96670a892c9e824e93ca4dd3d4bd
+https://agents.md	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://api.example.com	illustrative placeholder; no technical evidence		
+https://bencher.dev/learn/benchmarking/rust/custom-harness/	retrieved	🦀 How to build a Custom Benchmarking Harness in Rust	9c0f3fceca0b28dff3ae1819b5fb0715e00e296316e2d92b62b8ff787b99102b
+https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/	retrieved	Announcing Rust 1.99.0 | Rust Blog	d311ebe3576addfbcc676648bc5e53481f2ba7eee524ed7fb37333ae69bcc538
+https://catchts.com/type-state	general background link; no technical claim adopted		
+https://crates.io/category_slugs	retrieved	crates.io: Rust Package Registry	23d8172b58dfcf7fd4633573e924ab3bc62072b194f38297baeaf8199cec74ee
+https://crates.io/crates/criterion	retrieved	crates.io: Rust Package Registry	1a65070d3bdf18c91345757ca3dd177f96ab0cd0311bddbda22d0eb55301246e
+https://crates.io/crates/pretty_assertions	retrieved	crates.io: Rust Package Registry	55803cc4d1806631b4a82b517dc1d00c072c0cfe402ed14fc9227822213efd8c
+https://crates.io/crates/rstest	retrieved	crates.io: Rust Package Registry	9ed149b1ed82631aa4f7bfda9f13f6347ff8bc542c219f2294250b863383843f
+https://doc.rust-lang.org/book/ch10-00-generics.html	retrieved	Generic Types, Traits, and Lifetimes	93573d3b7e29c1985732dc4c8987f42d7bc5b90b99b56efcbb8535a39c9163d1
+https://doc.rust-lang.org/cargo/	retrieved	Introduction - The Cargo Book	1fafb9be9fa7393d23299d296798a4f638fcbbfbbe2729fd83a2f2b519411555
+https://doc.rust-lang.org/cargo/commands/cargo-bench.html	retrieved	cargo bench - The Cargo Book	e0d1db905326afef8a30c9b07f80933a5c7ddf7a60a59893a18fd454ec8bd939
+https://doc.rust-lang.org/cargo/reference/profiles.html	retrieved	Profiles - The Cargo Book	fbf62aa359a32fa6ef635b9a3f17a121ead6345dce7a78395faa5e7ce8933deb
+https://doc.rust-lang.org/clippy/usage.html	retrieved	Usage - Clippy Documentation	b271ce12f810e8f38908c59b4d0cd8f617fe77089e7147b51b4feaf9a060c468
+https://doc.rust-lang.org/edition-guide/rust-2024/	retrieved	Rust 2024 - The Rust Edition Guide	16d37e9c442d231bbeec476176f97cbec7c8331be61a5ccc542b82ed0d34d577
+https://doc.rust-lang.org/nomicon/	retrieved	Introduction - The Rustonomicon	4d3de7bc27969c31c2e15f9100a916223974be71f08cec9bfe9cc035d45ae3dd
+https://doc.rust-lang.org/reference/	retrieved	Introduction - The Rust Reference	0a83785ce0015881c7062181e3c71f9255140994651503a74b0ab8569f9dcf8c
+https://doc.rust-lang.org/reference/attributes/type_system.html	retrieved	Type system - The Rust Reference	55e7c927768d038d61c61ab37c71e6b63ab13f2db2460893e3ee2b01a8bcd721
+https://doc.rust-lang.org/reference/attributes/type_system.html#the-non_exhaustive-attribute	retrieved	Type system - The Rust Reference	55e7c927768d038d61c61ab37c71e6b63ab13f2db2460893e3ee2b01a8bcd721
+https://doc.rust-lang.org/releases.html	retrieved	Rust Release Notes	6caf2646a056cbc07a5693e50ce26b351655e5b8e35c75f412108283ac80018b
+https://doc.rust-lang.org/rust-by-example/generics.html	retrieved	Generics - Rust By Example	3836822fe750b0c02ae96823cc4382c6e2c588d6d2890c60a5461a0a85e362f4
+https://doc.rust-lang.org/rustdoc/lints.html	retrieved	specific lints - The rustdoc book	edeacef6998e9522a4e846e17e82db6c69f7eb1f0cac06b8804b62a494b637df
+https://doc.rust-lang.org/rustdoc/lints.html#broken_intra_doc_links	retrieved	specific lints - The rustdoc book	edeacef6998e9522a4e846e17e82db6c69f7eb1f0cac06b8804b62a494b637df
+https://doc.rust-lang.org/rustdoc/lints.html#missing_docs	retrieved	specific lints - The rustdoc book	edeacef6998e9522a4e846e17e82db6c69f7eb1f0cac06b8804b62a494b637df
+https://doc.rust-lang.org/stable/cargo/index.html	retrieved	Introduction - The Cargo Book	8f873483195749cbf726b17952f8585eaa9f084b8cca15b5b8f9dfa7d057d3f2
+https://doc.rust-lang.org/stable/cargo/reference/build-cache.html	retrieved	Build Cache - The Cargo Book	35628f551dcb19b00ee51a49970cd1beb6873f0a55949b0678a8a5da4be2becc
+https://doc.rust-lang.org/stable/cargo/reference/build-script-examples.html	retrieved	Build Script Examples - The Cargo Book	4d3ff798d1dcd07ee4ecbb4bc13d9369d2166b207091d467e43fd2f521e9ede2
+https://doc.rust-lang.org/stable/cargo/reference/build-scripts.html	retrieved	Build Scripts - The Cargo Book	64fd1e2d9cd60def84850b254ee08bd7c704154b783f5fb660f4186a51a7b53c
+https://doc.rust-lang.org/stable/cargo/reference/cargo-targets.html	retrieved	Cargo Targets - The Cargo Book	a09770859d1780c8507e05dc82264c16dfa091f23aa3cddec4eff89ecdd435f0
+https://doc.rust-lang.org/stable/cargo/reference/config.html	retrieved	Configuration - The Cargo Book	5d36055c86f2e0787abeabb586c38ccbab33d5089a9e076d3b800026dc9da477
+https://doc.rust-lang.org/stable/cargo/reference/credential-provider-protocol.html	retrieved	Credential Provider Protocol - The Cargo Book	382816782dfff87ef1f59752b8957de0de0cff73f06dd661c6cf45226ba8174a
+https://doc.rust-lang.org/stable/cargo/reference/environment-variables.html	retrieved	Environment Variables - The Cargo Book	ca21bf0733f900bf612b2988b225b84abc0e971e723a0cfe4a14763fac41bad1
+https://doc.rust-lang.org/stable/cargo/reference/external-tools.html	retrieved	External Tools - The Cargo Book	1103a13a3a6e50253d4c4da3968a369fb7e087210cde004b908cc7336480c883
+https://doc.rust-lang.org/stable/cargo/reference/features-examples.html	retrieved	Features Examples - The Cargo Book	3e9e6897015ba97fd3acf1ba6a828fbf7f56f413548c7404bb287b3d682789f2
+https://doc.rust-lang.org/stable/cargo/reference/features.html	retrieved	Features - The Cargo Book	1a4f465a0e9ec8f41848a36020c85e5411a046e2feaa0e640bf2c721a32d1a92
+https://doc.rust-lang.org/stable/cargo/reference/future-incompat-report.html	retrieved	Future incompat report - The Cargo Book	2d9ece5864c728ed092606657dace96f380f882ed6e1577c48732da2b1ccca75
+https://doc.rust-lang.org/stable/cargo/reference/index.html	retrieved	Cargo Reference - The Cargo Book	f20746e91b41e4380d2c9a7f6e6856c90877c088b62a4c044f95b123dd153e1b
+https://doc.rust-lang.org/stable/cargo/reference/lints.html	retrieved	Lints - The Cargo Book	dac31448fdebe07e887c0dca8cce8c3239c87223e224297f7b875afd1e9019fd
+https://doc.rust-lang.org/stable/cargo/reference/manifest.html	retrieved	The Manifest Format - The Cargo Book	fb9f2581478151b4e58176b70d42229026ecb84c6879bbd887d60f19703b6a34
+https://doc.rust-lang.org/stable/cargo/reference/overriding-dependencies.html	retrieved	Overriding Dependencies - The Cargo Book	4b10fcfa66ae91261e7a429c58ac7c9b447a51ff1ec83221a2216334a5ebc238
+https://doc.rust-lang.org/stable/cargo/reference/pkgid-spec.html	retrieved	Package ID Specifications - The Cargo Book	3355ff8bc382db87f4d2d9602657878cc5efc3384e36417ba48b65d6bd9a3362
+https://doc.rust-lang.org/stable/cargo/reference/profiles.html	retrieved	Profiles - The Cargo Book	799681f598e226a4406011b4b4443b32dd7a61f957b6d5190427d7c170d25337
+https://doc.rust-lang.org/stable/cargo/reference/publishing.html	retrieved	Publishing on crates.io - The Cargo Book	22f9e3ac61d61fd1417a405f70186d9596870187a67e3d8b84cf18814cb89b5f
+https://doc.rust-lang.org/stable/cargo/reference/registries.html	retrieved	Registries - The Cargo Book	43fb38dde4ffb1ff2922624e0a481f0c688b687e342e128ec338c5a09a0a592e
+https://doc.rust-lang.org/stable/cargo/reference/registry-authentication.html	retrieved	Registry Authentication - The Cargo Book	4935c4bd2486c05fdb4f1fdf3529df9c4f98e5937bae4384227833969b0ddbbf
+https://doc.rust-lang.org/stable/cargo/reference/registry-index.html	retrieved	Registry Index - The Cargo Book	4d0e7f392d42d955f291c04b0b4ad1c599f97de8c0ccfc47777c1aa359882d6c
+https://doc.rust-lang.org/stable/cargo/reference/registry-web-api.html	retrieved	Registry Web API - The Cargo Book	8bc5383b3e4a2293c575396b1e07be10d983f2500b36dac37f6a778615f01a62
+https://doc.rust-lang.org/stable/cargo/reference/resolver.html	retrieved	Dependency Resolution - The Cargo Book	7b3b19fe4e9bdc8d819221c28b2bbf047fb032899edd1b9659c4b81b4d2a6742
+https://doc.rust-lang.org/stable/cargo/reference/running-a-registry.html	retrieved	Running a Registry - The Cargo Book	4e72f4a1a324a6f0d82e7c3cc90f306b07894629149b4e695b5ad0d56ec26870
+https://doc.rust-lang.org/stable/cargo/reference/rust-version.html	retrieved	Rust version - The Cargo Book	6234dfe488600200d96ef3fe3eb031e49e175bc3e1b5b6874790c4fb6b7b8be2
+https://doc.rust-lang.org/stable/cargo/reference/semver.html	retrieved	SemVer Compatibility - The Cargo Book	898e9360c83efcecde281cb0bdfc726d520a53b413a58c66dde7e5ecd504939e
+https://doc.rust-lang.org/stable/cargo/reference/source-replacement.html	retrieved	Source Replacement - The Cargo Book	51202d2a3da1de252bb04f8e5a241151fd5340fbb93ca02f2958f3f28e7d9e76
+https://doc.rust-lang.org/stable/cargo/reference/specifying-dependencies.html	retrieved	Specifying Dependencies - The Cargo Book	e893ed082dbe11e9440145851d7cd2ae2205f7169d6f71074abde744e9352566
+https://doc.rust-lang.org/stable/cargo/reference/timings.html	retrieved	Reporting build timings - The Cargo Book	ae8883d77f4117432aa4ae2d2fdc2263e79890a043887ba084624d8df9f602a6
+https://doc.rust-lang.org/stable/cargo/reference/unstable.html	retrieved	Unstable Features - The Cargo Book	ec2f1cd6de8dc87b72e70b860f50ede03154d8eaf9a9c6b8c924f7735c664878
+https://doc.rust-lang.org/stable/cargo/reference/workspaces.html	retrieved	Workspaces - The Cargo Book	c11e1feb5545a097567975b90364cf6e0f39da9d6260da58e94f9a075e2ca164
+https://doc.rust-lang.org/stable/nomicon/aliasing.html	retrieved	Aliasing - The Rustonomicon	b20fe1f2c52b74168659d1eb690cc7bae9df068c34ba0546139484a34d2089fe
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-and-mutex.html	retrieved	Implementing Arc and Mutex - The Rustonomicon	26541dd7ed5cc09b35611466d4de21a9b8ebe78a554b0a627e6fb21ff70b5715
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-base.html	retrieved	Base Code - The Rustonomicon	5b43fba0391881e2af39c89085934a2e20a313faf3a8c31ec8f08e8a7a4d7521
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-clone.html	retrieved	Cloning - The Rustonomicon	72c8f848cd5b73499ee19b93c96c45fa5553854f8902766fbfad975299b04650
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-drop.html	retrieved	Dropping - The Rustonomicon	c698a347dc1732d8e9f5f95c487357c1956166734cf151786346852d21575920
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-final.html	retrieved	Final Code - The Rustonomicon	c225cd6ab649d3e7bca80a2c991f22e5565c50cb6b25d29500958888731d4b96
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc-layout.html	retrieved	Layout - The Rustonomicon	96c38b51929b4cc18c39d12a9759733e70be4684e351ddcb4240ccf6e5cf9969
+https://doc.rust-lang.org/stable/nomicon/arc-mutex/arc.html	retrieved	Arc - The Rustonomicon	02a08d62161f47963458624e727027ab6700adeca483a1f341735078c696e3d8
+https://doc.rust-lang.org/stable/nomicon/atomics.html	retrieved	Atomics - The Rustonomicon	f5d58f1349820b0a17b6c1a131d417276d91f51be2e1e20914be271cdfb6b4a8
+https://doc.rust-lang.org/stable/nomicon/beneath-std.html	retrieved	Beneath std - The Rustonomicon	2f310128ee4ab98d1a3e0fb379f73aac28a981264630cd5481a2a3a663775126
+https://doc.rust-lang.org/stable/nomicon/borrow-splitting.html	retrieved	Splitting Borrows - The Rustonomicon	627af013890fbc616646cc0ea2cb670957820009cb72eade3b5decac73decee9
+https://doc.rust-lang.org/stable/nomicon/casts.html	retrieved	Casts - The Rustonomicon	994b12cfdb513b0fd908517804ecc9445e77b758f4c7452bb6ee3cb5f2d3fcc8
+https://doc.rust-lang.org/stable/nomicon/checked-uninit.html	retrieved	Checked - The Rustonomicon	54b47f5317e1669d60188302e8c83c3496d11f8b987812dfc594769531992044
+https://doc.rust-lang.org/stable/nomicon/coercions.html	retrieved	Coercions - The Rustonomicon	986221507e11a72552fe9dcc8f100d245827f4a03128174f436f2ab3a9973468
+https://doc.rust-lang.org/stable/nomicon/concurrency.html	retrieved	Concurrency - The Rustonomicon	cf273d21a12aedb3a9d644d2185cb5772d626a5d89a6e3f2849b734b5ff78d09
+https://doc.rust-lang.org/stable/nomicon/constructors.html	retrieved	Constructors - The Rustonomicon	f53fb019169990546b20082f115cd33c5e1c5465e232d02888e251c217b40955
+https://doc.rust-lang.org/stable/nomicon/conversions.html	retrieved	Type Conversions - The Rustonomicon	58b2b3b3950e8d12efbfea3c83d9b97846aa3cf26d14cfae4dbb613a26570827
+https://doc.rust-lang.org/stable/nomicon/data.html	retrieved	Data Layout - The Rustonomicon	a88c1ce6bdacf5a3034a0a956202abd2a4faf8b6503b9a822be9d0f12c779495
+https://doc.rust-lang.org/stable/nomicon/destructors.html	retrieved	Destructors - The Rustonomicon	21fb9c0a2f5c5a977ee5c4f609636173926d395dbfdb3ac6e0545daf5f483779
+https://doc.rust-lang.org/stable/nomicon/dot-operator.html	retrieved	The Dot Operator - The Rustonomicon	5f02a63de60b4c7fba3c829ef6a4601c72f42eff72b5893c921d26c9f42f40d7
+https://doc.rust-lang.org/stable/nomicon/drop-flags.html	retrieved	Drop Flags - The Rustonomicon	3d27727ebc41ed513b4d7cd15048df0381efb9e6562e2c97ab082119315a9a05
+https://doc.rust-lang.org/stable/nomicon/dropck.html	retrieved	Drop Check - The Rustonomicon	8156d0f3b3bb92a0f65fc661b268ef2a3cb20e04afcff310771a7b41261c2c94
+https://doc.rust-lang.org/stable/nomicon/exception-safety.html	retrieved	Exception Safety - The Rustonomicon	2321c9d90e2126a9cff7cc0575a7c33986cdd31653d566ef3d71122fd4ff2314
+https://doc.rust-lang.org/stable/nomicon/exotic-sizes.html	retrieved	Exotically Sized Types - The Rustonomicon	3a1400ed7d05a3a7d2da37dbf5e1743ffe7a922fb60c80743563303b16981c67
+https://doc.rust-lang.org/stable/nomicon/ffi.html	retrieved	FFI - The Rustonomicon	5e0110dbe3428eb0e9d0eab4599f6a5b898852baded8a8fed2f67cad23fba03d
+https://doc.rust-lang.org/stable/nomicon/hrtb.html	retrieved	Higher-Rank Trait Bounds - The Rustonomicon	37810e3b48274e13bb9c34ea070db0c5aa7623c8f906ecc20cfe242cab97b2b9
+https://doc.rust-lang.org/stable/nomicon/index.html	retrieved	Introduction - The Rustonomicon	3173e30ab4206a78d184bf390a62e03c758ea8f0f16b09bd5cdab695939e145c
+https://doc.rust-lang.org/stable/nomicon/intro.html	retrieved	Introduction - The Rustonomicon	240356d838546641eea43aee6195772073a1b7574c518dcb4dd6eb18805b28d8
+https://doc.rust-lang.org/stable/nomicon/leaking.html	retrieved	Leaking - The Rustonomicon	2aa61a47c7d48db8de6f03572fc00fcac2f3292b7deb7bb2128991debd99b2e0
+https://doc.rust-lang.org/stable/nomicon/lifetime-elision.html	retrieved	Lifetime Elision - The Rustonomicon	b3b67ed67e3e509e91a4eebfaeeb97cab3c125b6b9e342aae7ef704a8aacdd63
+https://doc.rust-lang.org/stable/nomicon/lifetime-mismatch.html	retrieved	Limits of Lifetimes - The Rustonomicon	4d16dc885da86bb374f18413d79a1474a2c4c30bdc5e36ab01e5528ef61ebc7f
+https://doc.rust-lang.org/stable/nomicon/lifetimes.html	retrieved	Lifetimes - The Rustonomicon	4e47c79158e709f62885f0e51d6b07609f2e60c965957127ed9cdbba8eb68f5b
+https://doc.rust-lang.org/stable/nomicon/meet-safe-and-unsafe.html	retrieved	Meet Safe and Unsafe - The Rustonomicon	1ca553e3b320c42ff18a71b139d1a4bdb2e80b747d8ba4f3aa0d8f6641b048bc
+https://doc.rust-lang.org/stable/nomicon/obrm.html	retrieved	Ownership Based Resource Management - The Rustonomicon	729c075770e663e3190777b72c87ef43e8df0454e87173f64dbeb01f82dfee3b
+https://doc.rust-lang.org/stable/nomicon/other-reprs.html	retrieved	Other reprs - The Rustonomicon	fec0b8aa9b0844c6a37e8941ad58114d3222049f4d8e1efe7fe83850f948b5d4
+https://doc.rust-lang.org/stable/nomicon/ownership.html	retrieved	Ownership - The Rustonomicon	ea14da1380ebbc95b65997365b3a5e473ce8913c74b51bd684518cdc0079abc2
+https://doc.rust-lang.org/stable/nomicon/panic-handler.html	retrieved	#[panic_handler] - The Rustonomicon	7cdef65ab06928b869e331812518828005c4d46c918270f67badf6b55417d2e2
+https://doc.rust-lang.org/stable/nomicon/phantom-data.html	retrieved	PhantomData - The Rustonomicon	ed9eab118703109a8f6b89f3bb4e86005bd1295cab5aea83035b72dce71e66ea
+https://doc.rust-lang.org/stable/nomicon/poisoning.html	retrieved	Poisoning - The Rustonomicon	9c7bff26330955533654fe50d7faefeb0686680f5e7925b3c5f08322626495c3
+https://doc.rust-lang.org/stable/nomicon/races.html	retrieved	Races - The Rustonomicon	5c99dfac6c90086044021e2e3e5a90e2a2aa6321a19582d5eafe48d749f18b96
+https://doc.rust-lang.org/stable/nomicon/references.html	retrieved	References - The Rustonomicon	12546cb5546998ba9eb79d4f02ddc5c91d902a3238ea82b73c31db22ccd7e1c8
+https://doc.rust-lang.org/stable/nomicon/repr-rust.html	retrieved	repr(Rust) - The Rustonomicon	b56e623556eeb79da62576310a6774d5366c58550271707878060088b846e488
+https://doc.rust-lang.org/stable/nomicon/safe-unsafe-meaning.html	retrieved	How Safe and Unsafe Interact	83ba37e91bf7d0360f28532fef0808b1eb0dc608346a86c3efa2c8b68e9664db
+https://doc.rust-lang.org/stable/nomicon/send-and-sync.html	retrieved	Send and Sync - The Rustonomicon	9e1727ecb3aefa7d166da9f6ebf028be0621e746c405268e627926ce55e50b8e
+https://doc.rust-lang.org/stable/nomicon/subtyping.html	retrieved	Subtyping and Variance - The Rustonomicon	ab44b4e11b29236a9f85fb4b73171b4ce51c40729256e088b7a2f4d7fc12442f
+https://doc.rust-lang.org/stable/nomicon/transmutes.html	retrieved	Transmutes - The Rustonomicon	3a97c0834893108ae44b138898b99e08e0643d1a620bd7fa2f26acc8fd7e3ed0
+https://doc.rust-lang.org/stable/nomicon/unbounded-lifetimes.html	retrieved	Unbounded Lifetimes - The Rustonomicon	25ca9bda1677c69e7d1d6d8d817b050bcc04105324e9bef09740a52fb5017727
+https://doc.rust-lang.org/stable/nomicon/unchecked-uninit.html	retrieved	Unchecked - The Rustonomicon	d63c3a2a24ac24a722dc045e7c7f2824fa46011ece1e31e40a5441ab64f2c681
+https://doc.rust-lang.org/stable/nomicon/uninitialized.html	retrieved	Uninitialized Memory - The Rustonomicon	7d57e9ef9a406e2e81ae5ac42d4a247332a82038ae0debbcf6dca8e96ad177a0
+https://doc.rust-lang.org/stable/nomicon/unwinding.html	retrieved	Unwinding - The Rustonomicon	ded0f65029d626a59b1dfab844393dad1b2c7151afab1167eefa986728b217a2
+https://doc.rust-lang.org/stable/nomicon/vec/vec-alloc.html	retrieved	Allocating - The Rustonomicon	173cd3c0766e860fc488fef862326878c836ab9c8d5dcecd7a259a4f8cfb1394
+https://doc.rust-lang.org/stable/nomicon/vec/vec-dealloc.html	retrieved	Deallocating - The Rustonomicon	c26406df435b3820033e3a14969ca9904e45dcaaeae566391cd5001631440236
+https://doc.rust-lang.org/stable/nomicon/vec/vec-deref.html	retrieved	Deref - The Rustonomicon	c0c45ef6ad11ee968fc4adc71f42fa2e53d57d46e5c4150d3c86ebda49c7486d
+https://doc.rust-lang.org/stable/nomicon/vec/vec-drain.html	retrieved	Drain - The Rustonomicon	b32f8724c0be8bcf74f13b077e834097305a9a124cb169ce72245fa1b8254983
+https://doc.rust-lang.org/stable/nomicon/vec/vec-final.html	retrieved	Final Code - The Rustonomicon	ccaba21db3ed248ac2533851e175246a23663ead90f6336198cacbbe43a4a0ba
+https://doc.rust-lang.org/stable/nomicon/vec/vec-insert-remove.html	retrieved	Insert and Remove - The Rustonomicon	e2a6f84f22825118360952cd668a6fae9c576f384a47cd3dc6bad273cd4e48d2
+https://doc.rust-lang.org/stable/nomicon/vec/vec-into-iter.html	retrieved	IntoIter - The Rustonomicon	0871c50ad9b5438c19dc1af924b6ace37b78c286b5b0b762d0d9dcc5a1b552c3
+https://doc.rust-lang.org/stable/nomicon/vec/vec-layout.html	retrieved	Layout - The Rustonomicon	67f8e8f8838bbd3565ba3be1d7fda677913f09bdd66e445117b30f18f111b81e
+https://doc.rust-lang.org/stable/nomicon/vec/vec-push-pop.html	retrieved	Push and Pop - The Rustonomicon	0709aade3b86f22da7a5c9e1f479910f26af5f54a1c85b2330628414ec2f3c38
+https://doc.rust-lang.org/stable/nomicon/vec/vec-raw.html	retrieved	RawVec - The Rustonomicon	15da7bc8923df80b2f24023eeee6dab52ceb76601617ed163c65389fed6d147d
+https://doc.rust-lang.org/stable/nomicon/vec/vec-zsts.html	retrieved	Handling Zero-Sized Types - The Rustonomicon	a84cca3ff3eb411a9c3e6c3bacbb550f81d8241fd6ba0a1fdf257de5a4f62d8f
+https://doc.rust-lang.org/stable/nomicon/vec/vec.html	retrieved	Implementing Vec - The Rustonomicon	9cecd221f7cfd8df55b81ea177da08b6a8c9466ad91ffc0fafcdf90c491a972b
+https://doc.rust-lang.org/stable/nomicon/what-unsafe-does.html	retrieved	What Unsafe Can Do - The Rustonomicon	ece42a8255e05f0db5af3dd3bad474c2bf795e7934ba24ed43962a9d4e43c688
+https://doc.rust-lang.org/stable/nomicon/working-with-unsafe.html	retrieved	Working with Unsafe - The Rustonomicon	06f45976419215a56e5d6a7df7e64722479848ab79f7c0e4d874863ec8457ff4
+https://doc.rust-lang.org/stable/reference/behavior-considered-undefined.html	retrieved	Behavior considered undefined - The Rust Reference	b19ca597fac88ccd803baf3860adb05733617b429a0bd341e1e9213a6d9d263b
+https://doc.rust-lang.org/stable/reference/behavior-not-considered-unsafe.html	retrieved	Behavior not considered unsafe - The Rust Reference	9d48dc27c424dfa9854610a8e7f67699e0ac4f955acab30562f36daa6bd22e7a
+https://doc.rust-lang.org/stable/reference/destructors.html	retrieved	Destructors - The Rust Reference	10764c1f6ed0002a874a34c1679d6acbd1108a568e38d89d0f35803b27f77711
+https://doc.rust-lang.org/stable/reference/index.html	retrieved	Introduction - The Rust Reference	989a6b87e319e9175a46e85f9d77be0d7172049283bccaa204d58cb5db76a81f
+https://doc.rust-lang.org/stable/reference/items/external-blocks.html	retrieved	External blocks - The Rust Reference	33eba775efdf1a08699867824fb21a89ef4aec9c549bab8fbad5feb974611d47
+https://doc.rust-lang.org/stable/reference/items/functions.html	retrieved	Functions - The Rust Reference	65ab9fbb4b39789234ad947ad3a2aa0a6603ab27384b949627aa58230c856971
+https://doc.rust-lang.org/stable/reference/memory-allocation-and-lifetime.html	retrieved	Memory allocation and lifetime - The Rust Reference	04a46a7bb85fc067c662ff58e96e135081f67280b8ca01b2ebc33f22baf4dc7a
+https://doc.rust-lang.org/stable/reference/memory-model.html	retrieved	Memory model - The Rust Reference	af453836a5bf71cf03e67610eb63ed43430d787ae3ddd613e0739a15cb9d09c5
+https://doc.rust-lang.org/stable/reference/type-layout.html	retrieved	Type layout - The Rust Reference	150ba03bf0136827f296bfdbec53535f4450d9c328d289bf4d66489c884ba26d
+https://doc.rust-lang.org/stable/reference/types/array.html	retrieved	Array types - The Rust Reference	524a03ce336da5b84b3b0cd7cf388b04873eaa459ae1693fc7c81b2b5ef453f4
+https://doc.rust-lang.org/stable/reference/types/boolean.html	retrieved	Boolean type - The Rust Reference	5e34c051ac01a5c1a270144acba416b5eecb8886fc6c02a2a0d778c18098d063
+https://doc.rust-lang.org/stable/reference/types/char.html	retrieved	Character type - The Rust Reference	a3c0be6b8cefca4d522dfc1b946377e5bbdbe9a3269952c01b9aa35cbcad516d
+https://doc.rust-lang.org/stable/reference/types/closure.html	retrieved	Closure types - The Rust Reference	4a9591b6c0b212dd1262e4217a24bfddf3067577f7864dcae1a62c7b0c0b9dad
+https://doc.rust-lang.org/stable/reference/types/enum.html	retrieved	Enumerated types - The Rust Reference	449d3d5083107269f53947bf8a25934d5b4958e3b889a44ffa5f4429004b38d8
+https://doc.rust-lang.org/stable/reference/types/function-item.html	retrieved	Function item types - The Rust Reference	a38e3c4240237396d6310af4014f79652da3dc5d18e85bba4d6b331962937e39
+https://doc.rust-lang.org/stable/reference/types/function-pointer.html	retrieved	Function pointer types - The Rust Reference	b19e50930440dc20cee33d134b005b11c7f714c28b37831dd3285c4191baa30c
+https://doc.rust-lang.org/stable/reference/types/impl-trait.html	retrieved	Impl trait type - The Rust Reference	d71dee742d88b7192a99c8c470d09748d666cc2d2d7bd434924206823cf651e7
+https://doc.rust-lang.org/stable/reference/types/inferred.html	retrieved	Inferred type - The Rust Reference	03253f46bcb3d150e3e935d70c1a3b0dc0c5361f633edf06a85dc94afa6b6674
+https://doc.rust-lang.org/stable/reference/types/never.html	retrieved	Never type - The Rust Reference	3fe441cc5af6b9b855d82abd3cd207c8ee545bcc68c222a11cd652076cb72da2
+https://doc.rust-lang.org/stable/reference/types/numeric.html	retrieved	Numeric types - The Rust Reference	36fd59a30969095f85927632733ff0f350c6b679ed9a5e02d04fac0494373d1c
+https://doc.rust-lang.org/stable/reference/types/parameters.html	retrieved	Type parameters - The Rust Reference	616c8b8710edfee8e51dfd5c810c955cbcb0faccba32a7de712f548b86c77d50
+https://doc.rust-lang.org/stable/reference/types/pointer.html	retrieved	Pointer types - The Rust Reference	597a7b65121ff1f6d87df2107207c95b4448cdfa1efa8773c0c2256bbe702a81
+https://doc.rust-lang.org/stable/reference/types/slice.html	retrieved	Slice types - The Rust Reference	2a897162689d018e0d526b444d80e14896e0b5590fc30a316ea98ca3d84b1277
+https://doc.rust-lang.org/stable/reference/types/str.html	retrieved	String slice type - The Rust Reference	533742bc4ec17e9880b275ae93409059f549ff9a03429aa99b442ccbcfe9989f
+https://doc.rust-lang.org/stable/reference/types/struct.html	retrieved	Struct types - The Rust Reference	d7b2e2b13a638afb2ae12fcd4e3d171fbca06900091f1abf4fc4c768cfe6d168
+https://doc.rust-lang.org/stable/reference/types/trait-object.html	retrieved	Trait object types - The Rust Reference	4829019d0fe12c66cd900cefbf23e6820081c6ff4c2da9b652dc417b622ed3fb
+https://doc.rust-lang.org/stable/reference/types/tuple.html	retrieved	Tuple types - The Rust Reference	f16c22d8369e05df093ec8ebfa3d4efecf19b843b2a709b2d487dea390722bdc
+https://doc.rust-lang.org/stable/reference/types/union.html	retrieved	Union types - The Rust Reference	39b4a959ae6edd238aed69361d2fceec788bd33b06fb722dbace4338e5ae60ba
+https://doc.rust-lang.org/stable/reference/unsafe-keyword.html	retrieved	The unsafe keyword - The Rust Reference	c9a557c41d268d09ff4424b448419d9807ac26d438d6964a0dfd1ea7fb710a3f
+https://doc.rust-lang.org/stable/reference/unsafety.html	retrieved	Unsafety - The Rust Reference	94cef9c612c22bdf14929d764a7b9886fd057e60336e7cc4ff424b410b3380c6
+https://doc.rust-lang.org/stable/rust-by-example/index.html	retrieved	Introduction - Rust By Example	71682d86bff15efbd0d1295a7575cd59f433eaa34a69ed43a2225882d2a24179
+https://doc.rust-lang.org/stable/rust-by-example/scope/borrow.html	retrieved	Borrowing - Rust By Example	a6ff74545653fbe3d718e5f6882c0f70a87549a8df9e26f366b1e28670e8677d
+https://doc.rust-lang.org/stable/rust-by-example/scope/lifetime.html	retrieved	Lifetimes - Rust By Example	95e298658c36342926eb08c7692b7c951505b85afb8da5f9df5871a50ad43298
+https://doc.rust-lang.org/stable/rust-by-example/unsafe.html	retrieved	Unsafe Operations - Rust By Example	550357bd934cc68e7d82ff8f84815c36149ccb010cd5ede909997f4cb490467f
+https://doc.rust-lang.org/stable/rustc/codegen-options/index.html	retrieved	Codegen Options - The rustc book	84dbaf6c3bb2fce6487942a10b5983a21809b2c948fccdd3ec9dea51e10ec66b
+https://doc.rust-lang.org/stable/rustc/command-line-arguments.html	retrieved	line Arguments - The rustc book	77c49489e041b0c924bbaf8fcb7b172488780c6c5ff7ad498e96fa49821887d5
+https://doc.rust-lang.org/stable/rustc/command-line-arguments/print-options.html	retrieved	Print Options - The rustc book	52ed733a49036969fb1b487b9f0431459144644c0c610bd99dcafe3a29878d07
+https://doc.rust-lang.org/stable/rustc/index.html	retrieved	What is rustc? - The rustc book	5b12738fc5437a43708da5a72521041a03fae0ecf0868ff4bb74de7e2b5a9a01
+https://doc.rust-lang.org/stable/rustc/lints/groups.html	retrieved	Lint Groups - The rustc book	c8c2dc1234f303205eef2b5b6957643800019d1f301d2d619bb506bf65c14ea0
+https://doc.rust-lang.org/stable/rustc/lints/index.html	retrieved	Lints - The rustc book	93ad36a67a7b253dbdb807f2cfbdf77a110b9bc30a4851d8d70be8a3c25a1a83
+https://doc.rust-lang.org/stable/rustc/lints/levels.html	retrieved	Lint Levels - The rustc book	3fdf3a9fde613f1ca0e1575395c5d5f4d313f020a3f1d16e6f4c300bab5e9319
+https://doc.rust-lang.org/stable/rustc/lints/listing/allowed-by-default.html	retrieved	by-default Lints - The rustc book	55859ca020a328d9bbe078a20942acf19ae49e2194eeb38697d4eec1e093c076
+https://doc.rust-lang.org/stable/rustc/lints/listing/deny-by-default.html	retrieved	by-default Lints - The rustc book	00fff7477bb64877c3cab023a3396778c6ad2197b90325070b0a02f0ece26c4a
+https://doc.rust-lang.org/stable/rustc/lints/listing/index.html	retrieved	Lint Listing - The rustc book	db79b33ab7164fc2f502fa3840259360262c9794d3aaeb9e13dfea9d961f6f50
+https://doc.rust-lang.org/stable/rustc/lints/listing/warn-by-default.html	retrieved	by-default Lints - The rustc book	c0befdaa847aca617730c5e78c610e63a2542ba7d08217cb8611048e7f89c60d
+https://doc.rust-lang.org/stable/rustc/profile-guided-optimization.html	retrieved	guided Optimization - The rustc book	2937c2aa452212a9c4457869fb27f020e027fd2bfcbe00a096a9790d01e2b52a
+https://doc.rust-lang.org/stable/std/alloc/struct.Layout.html	retrieved	Layout in std::alloc - Rust	1c7642b6561b3e10ffba598435c3b1fef666e3ae81ed73d82833cf39ef9e4eae
+https://doc.rust-lang.org/stable/std/boxed/struct.Box.html	retrieved	Box in std::boxed - Rust	a1e45f750780d370ebcf1cd4d5b55630240b2627fa70336e7bd6f3af0dabe3e1
+https://doc.rust-lang.org/stable/std/cell/struct.UnsafeCell.html	retrieved	UnsafeCell in std::cell - Rust	0e6e6ea27382e3d6e3a1f9e0149cf15ddbae41c70e051215853d2738631826cc
+https://doc.rust-lang.org/stable/std/ffi/struct.VaList.html	retrieved	VaList in std::ffi - Rust	b36b516f5a928382d08fa3000c75c35b87dfa970e8274bb55f7d96772afe7154
+https://doc.rust-lang.org/stable/std/index.html	retrieved	std - Rust	b23e454b649d25fe49d54f2ce074ed7a4123fa004bd4e4828552d128647eb0fd
+https://doc.rust-lang.org/stable/std/mem/fn.align_of_val_raw.html	retrieved	align_of_val_raw in std::mem - Rust	09adbba9252b1fd5d2113d0b0df1addaebdb5df9830b5c3836c8e112ec62f8b4
+https://doc.rust-lang.org/stable/std/mem/fn.size_of_val_raw.html	retrieved	size_of_val_raw in std::mem - Rust	2496b34465f5b1f101fd2847e8a5ef016c45d3daa798677751b5394e59e1e2c7
+https://doc.rust-lang.org/stable/std/mem/union.MaybeUninit.html	retrieved	MaybeUninit in std::mem - Rust	a6f5ae02dc2671c9e50b07bb6ae41069d689adf70901a057be177e850e8e5500
+https://doc.rust-lang.org/stable/std/pin/index.html	retrieved	std::pin - Rust	172ee97962a29a603c5c8b5375fb1138913093376660161def5b2fe7072893eb
+https://doc.rust-lang.org/stable/std/primitive.slice.html	retrieved	slice - Rust	6886d7b6354e8e7297acb5a8c2c5445c711a057dd5efa236b8014925f22bd610
+https://doc.rust-lang.org/stable/std/primitive.str.html	retrieved	str - Rust	c251fcd492fc07078fc5cab4bfa5d790c351f6b22f774179092a09ac9a13d8e0
+https://doc.rust-lang.org/stable/std/ptr/index.html	retrieved	std::ptr - Rust	c0d02f1717a39a2814156d4d30f45a6af28f5a9eb7c31fc92afa6de51a2ff6d4
+https://doc.rust-lang.org/stable/std/slice/fn.from_raw_parts.html	retrieved	from_raw_parts in std::slice - Rust	82e9d0823eb9e58c4896535f7041b5e9bb119ae7910e5573a8074c73dfc28bc3
+https://doc.rust-lang.org/stable/std/slice/fn.from_raw_parts_mut.html	retrieved	from_raw_parts_mut in std::slice - Rust	c425ef5f666498ad5a6aab4f077a41f57d324fb8441a0837ea21bd076dc20163
+https://doc.rust-lang.org/stable/std/sync/atomic/enum.Ordering.html	retrieved	Ordering in std::sync::atomic - Rust	f6796a0738853797e7f5bc0d2ba9c0a6670561f62d71e902e69604a959164db3
+https://doc.rust-lang.org/stable/std/sync/atomic/index.html	retrieved	std::sync::atomic - Rust	c85170026d5d3ab66fa5705b788f0ac181092bf39c05b6bb93bcbb53022d657d
+https://doc.rust-lang.org/stable/std/sync/struct.Arc.html	retrieved	Arc in std::sync - Rust	368525b1aa9d2b70334db0b4c18f22ac40a4d67dc5cc87a8c577a15d950e9409
+https://doc.rust-lang.org/stable/std/sync/struct.Mutex.html	retrieved	Mutex in std::sync - Rust	2384f8fefadec45afb0ed859b6f4cfb283067f165d94d0f06f6c639921953408
+https://doc.rust-lang.org/stable/std/sync/struct.RwLock.html	retrieved	RwLock in std::sync - Rust	9d85a1041625dfc54545a71a5c97996f9b408774a919c31d7c1f64564609ef6a
+https://doc.rust-lang.org/stable/std/thread/fn.scope.html	retrieved	scope in std::thread - Rust	ec9ffe21ed351a337236686c6f0d264792ff7741284ae9e880c577f6221cae80
+https://doc.rust-lang.org/stable/std/vec/struct.Vec.html	retrieved	Vec in std::vec - Rust	a15c41228fe93063ac067573b1ba7266b208dc7658f52f1bb96370296213b27e
+https://doc.rust-lang.org/stable/style-guide/advice.html	retrieved	Other style advice - The Rust Style Guide	0fcf6f27b043ca6645cd4587a4b022b09b700c9ccb0693a70050f9900866da5f
+https://doc.rust-lang.org/stable/style-guide/cargo.html	retrieved	Cargo.toml conventions - The Rust Style Guide	d86e54d29031ce6a9f18d3bdb98b0d0e3a56f2a88d5d108ff4b33c515a9edf83
+https://doc.rust-lang.org/stable/style-guide/editions.html	retrieved	Rust style editions - The Rust Style Guide	9a9f6b0da36222857e4a28b17aab9c3721ee162fc69839ed7b387368d2821b4e
+https://doc.rust-lang.org/stable/style-guide/expressions.html	retrieved	Expressions - The Rust Style Guide	ddc8d99fa1f0be7700d3ddb55127a0f8686ac9424f049e9f52e4d8e83dd60b42
+https://doc.rust-lang.org/stable/style-guide/index.html	retrieved	Introduction - The Rust Style Guide	a736fb4a9aead2ccf6035963cdcba2dae9af74ab6e6a88560e5cec5c2c541e04
+https://doc.rust-lang.org/stable/style-guide/items.html	retrieved	Items - The Rust Style Guide	c1d92f294af32527318171f53a2bbeaccb75d89b19734a0b8e400c7f50efdf59
+https://doc.rust-lang.org/stable/style-guide/nightly.html	retrieved	only syntax - The Rust Style Guide	bcab29d4d724649937b73f7f6ce66424572b1b4503af9ec567ef75460253f9df
+https://doc.rust-lang.org/stable/style-guide/principles.html	retrieved	Guiding principles and rationale - The Rust Style Guide	20ce4106156632748421b698e25323871a8d3d2db52883176267c82b966fb96d
+https://doc.rust-lang.org/stable/style-guide/statements.html	retrieved	Statements - The Rust Style Guide	d00b1a85cb42e6d6358acd8bf62d3c63ffe938c8c7dbf766d6316601c5c01b4e
+https://doc.rust-lang.org/stable/style-guide/types.html	retrieved	Types and Bounds - The Rust Style Guide	29d6262a883cdfe32e7f3a1d7db1a10406c9e8a6b23fea20aac2653caf626c54
+https://doc.rust-lang.org/std/	retrieved	std - Rust	b2a20fbeeea5dc0b624555ff6594f6195628937de064b5cc921b8f28df65f4ef
+https://doc.rust-lang.org/std/borrow/enum.Cow.html	retrieved	Cow in std::borrow - Rust	0297025d158ca5c82ebab38fa32e8ae3f5f4ef8a232b676e9dbc8eeb9dea9555
+https://doc.rust-lang.org/std/boxed/struct.Box.html	retrieved	Box in std::boxed - Rust	4b85a6e91f76cc66d8360aa33e66b8a07971396eb999072d4de3002710f69f19
+https://doc.rust-lang.org/std/cell/struct.Cell.html	retrieved	Cell in std::cell - Rust	ad78d00fe9925a973fa03d64dafb4616aec14b737973fa7af669ecd0d0c6a45d
+https://doc.rust-lang.org/std/cell/struct.LazyCell.html	retrieved	LazyCell in std::cell - Rust	a1740167364064b65e4b831be2c46fd1cc7db095166df37accab118ca191ce3a
+https://doc.rust-lang.org/std/cell/struct.OnceCell.html	retrieved	OnceCell in std::cell - Rust	07594ab51f42b05172a39277ced48997fdcf8c58673e2abd7b88a4bdf7e81b2b
+https://doc.rust-lang.org/std/cell/struct.RefCell.html	retrieved	RefCell in std::cell - Rust	1dc74429e572c9b58762dd2d22c53a31866ffd321b72bf273ecdfdc37a837029
+https://doc.rust-lang.org/std/macro.assert_matches.html	retrieved	assert_matches in std - Rust	e8870496afd8e4d96c89ea8e1e61bd185c25f5c62e1cbbc1c8cf84a5a3fd165d
+https://doc.rust-lang.org/std/macro.debug_assert_matches.html	retrieved	debug_assert_matches in std - Rust	f9f60c999cbf8695fedeb2fb0fc1e663c76e4fa22962da7e852bcd6422e2bb31
+https://doc.rust-lang.org/std/primitive.pointer.html	retrieved	pointer - Rust	94c079a92f38344b91d016a43498d86e103c647a5b3e711908d3faebb28b1793
+https://doc.rust-lang.org/std/rc/struct.Rc.html	retrieved	Rc in std::rc - Rust	37fc74356d67d05479af3169305328e6f20014c1f5d873e3d7021f2950e024b3
+https://doc.rust-lang.org/std/result/	retrieved	std::result - Rust	48fe0ee4f163678d57af07d010d1f20e10aa77c270f83e46da5e67696b011c43
+https://doc.rust-lang.org/std/sync/struct.Arc.html	retrieved	Arc in std::sync - Rust	cf782dd597bc1d8bdb63ad783a48c64b0744d270e45bf8c2f01d7466e2e89cff
+https://doc.rust-lang.org/std/sync/struct.LazyLock.html	retrieved	LazyLock in std::sync - Rust	c254d52611ae75cd28711eab4b055286ede9d4689ef55e0e367b1db11111a6c1
+https://doc.rust-lang.org/std/sync/struct.Mutex.html	retrieved	Mutex in std::sync - Rust	05c428cd72113af71010a6c4c77f768e0e733d5b92e410c0cc080317a5cdf4ef
+https://doc.rust-lang.org/std/sync/struct.OnceLock.html	retrieved	OnceLock in std::sync - Rust	7dcf373c505e504bbad7f8c1a73a7d7ab862a4f8a0adcfc32040e13e8d382ff1
+https://doc.rust-lang.org/std/sync/struct.RwLock.html	retrieved	RwLock in std::sync - Rust	6184e3bc664d4ca53ed22ceef163543c3ffdfa0b11c4ba295bbb954c1e00fce9
+https://docs.kernel.org/rust/coding-guidelines.html	retrieved	Coding Guidelines — The Linux Kernel documentation	6e2bc82fa46d0467ef95993efb31eb407c13fcbed67570e4f4abdddc2a26add2
+https://docs.rs/crate	unavailable; omitted with user approval	The requested crate does not exist	ebda9f25309470ee8245cad229e7fade4bc28192925bd60ca926c5fbb60cb082
+https://docs.rs/my-awesome-crate	illustrative placeholder; no technical evidence		
+https://docs.rs/my-crate	illustrative placeholder; no technical evidence		
+https://docs.rs/smallvec/latest/smallvec/	retrieved	smallvec - Rust	edaa1697c9cb0bb889b954baba3fc27ee606463e04116f6bad88c20353f2fe82
+https://docs.rs/tokio-util/latest/tokio_util/task/struct.TaskTracker.html	retrieved	TaskTracker in tokio_util::task - Rust	07b9da314285dafbd34bcb9919b4785fa379ddfc18850fe054a19ecb3feb2036
+https://docs.rs/tokio/latest/tokio/macro.select.html	retrieved	select in tokio - Rust	c2aebf39becc9a0256b5f3718e6b1e6136c82dcf2ff5ea09cc42a8f0d770c206
+https://docs.rs/tokio/latest/tokio/sync/struct.Mutex.html	retrieved	Mutex in tokio::sync - Rust	5249ab058075cc3177c55cef2844d9f1dd9c5ac2f0cddea2535598eab42d7aee
+https://docs.rs/tokio/latest/tokio/task/fn.spawn.html	retrieved	spawn in tokio::task - Rust	17f95ae517627604921a9ac2b60218fff74aa53aa834c54515e3c1f71ac01234
+https://docs.rs/tokio/latest/tokio/task/fn.spawn_blocking.html	retrieved	spawn_blocking in tokio::task - Rust	0249cd37227fade8c3e4a93beaa5aa9c74e60373d1c6192e4682cf130f7ad241
+https://docs.rs/tokio/latest/tokio/task/struct.JoinSet.html	retrieved	JoinSet in tokio::task - Rust	46ac2dd39a8362546ffe38fe7ad88386f07ce0168aa8fa3f460a95f96cf2f927
+https://effective-rust.com/	retrieved	Effective Rust - Effective Rust	13d8fbd9341378810ca14e7849979203e3494a73d07afddc39761483e7c98089
+https://en.wikipedia.org/wiki/Don%27t_repeat_yourself	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://example.com	illustrative placeholder; no technical evidence		
+https://example.com/schema.json	illustrative placeholder; no technical evidence		
+https://github.com/BurntSushi/ripgrep/blob/master/crates/globset/src/pathutil.rs	retrieved	ripgrep/crates/globset/src/pathutil.rs at master · BurntSushi/ripgrep	c67f3a016ea1c5d41fe61c8b2a4308e32868735f622141a00821631fd8b30b81
+https://github.com/BurntSushi/ripgrep/blob/master/crates/printer/src/standard.rs	retrieved	ripgrep/crates/printer/src/standard.rs at master · BurntSushi/ripgrep	db83316122472b3a30490c96535349b5ded388a41b7f52ccc8a3bf67cb9eac2b
+https://github.com/Safety-Critical-Rust-Consortium/safety-critical-rust-coding-guidelines	retrieved	GitHub - Safety-Critical-Rust-Consortium/safety-critical-rust-coding-guidelines: Coding Guidelines for Safety Critical Rust developed by the Safety Critical Rust Consortium.	39e1ea5d1b19884da682f42b934e2ee739f39b3601b797404b2f8680e57dc94b
+https://github.com/apollographql/rust-best-practices	retrieved	GitHub - apollographql/rust-best-practices	640bfd143b00811630072c835fd69d8f0c321e9c0bd4803a4767333114590709
+https://github.com/apollographql/rust-best-practices/tree/main/examples/simple-type-state	retrieved	rust-best-practices/examples/simple-type-state at main · apollographql/rust-best-practices	152c4ebbf405a1d4fcda2a467a1397eb6878153ce530ae83866d33f0e5418e0c
+https://github.com/apollographql/rust-best-practices/tree/main/examples/type-state-builder	retrieved	rust-best-practices/examples/type-state-builder at main · apollographql/rust-best-practices	1b004b3306677666bd4c0a69aa363a620a81f730b00ea62f04da4ae274a1b635
+https://github.com/flamegraph-rs/flamegraph	retrieved	GitHub - flamegraph-rs/flamegraph: Easy flamegraphs for Rust projects and everything else, without Perl or pipes <3	636f2ba9c2cc86860c09c7d9995f1ae5409d61cb337402048c9fe3f82a87bd29
+https://github.com/launchbadge/sqlx/blob/master/src/macros/mod.rs	retrieved	sqlx/src/macros/mod.rs at main · transact-rs/sqlx	0eea8eaa35c17992a47c97754cbf2a70da68dfa03d3ddf4486c820e804577f50
+https://github.com/leonardomso/rust-skills	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://github.com/leonardomso/rust-skills.git	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://github.com/mstange/samply	retrieved	GitHub - mstange/samply: Command-line sampling profiler for macOS, Linux, and Windows	965da2de43ce8e3a944857f62d4df823d553c06dab0417fda4fec0800f4657cd
+https://github.com/roc-lang/roc/blob/main/crates/compiler/solve/src/to_var.rs	unavailable; omitted with user approval	File not found · roc-lang/roc	0e9ffef947f0f5bd7ae1a658129a9c880227de776c49930d1416410af8ffc205
+https://github.com/rust-lang/miri	retrieved	GitHub - rust-lang/miri: An interpreter for Rust's mid-level intermediate representation	88f90e90753baad3abfc1065e34efdc53e6c07b75594dbc630c480cfeb1604c2
+https://github.com/rust-lang/nomicon/issues	retrieved	Issues · rust-lang/nomicon	ca6e6b662f89ae0245b24ce05ebae5e95621ca36b08bce2fb4df9ecc87e611be
+https://github.com/rust-lang/nomicon/issues/400	retrieved	atomics part has misleading statements about hardware reordering caused by cache	ec1fc681583c86bd896f530340eb0fc1da167e35a52764b3f55f6e0120187362
+https://github.com/rust-lang/nomicon/issues/435	retrieved	"Working With Uninitialized Memory" makes overly broad claims	46a301ec2cf8ef399057ef11f97a614d0d6ebd6db308f211bdd68c2c98433e3e
+https://github.com/rust-lang/nomicon/issues/451	retrieved	Description about `Layout::array` differs from std	c9d5b09f4500849ac21498019c0dbb179fc3ed9a2465dd1e39c0e23e2ec460c8
+https://github.com/rust-lang/nomicon/issues/453	retrieved	8.2 "Send and Sync" appears to misdefine "Send"	cb4fe5ab3ca71d55e6367dc0dc375759d0ae2e848509442ed8320588ef22ae9b
+https://github.com/rust-lang/nomicon/issues/454	retrieved	Can undefined behavior that is theoretically reachable, but not reached in practice cause problems?	23a9588d0c47be6bc6de38154909f039c19d384389e0b85b1fcc2efa76512854
+https://github.com/rust-lang/nomicon/issues/479	retrieved	Incorrect explanation of Sequential Consistency	fb3bd4913735ef1ff37b7f5ea926977463a5e6fbb29d7aacdacb702a0ad94c56
+https://github.com/rust-lang/nomicon/issues/497	retrieved	You can't actually `impl !Send` or `impl !Sync` (yet)	1b597f3abd7c7436b33882d00fbc86c5a1b1ca760087f74ace40cd53a886083d
+https://github.com/rust-lang/nomicon/issues/503	retrieved	Phrasing of Sync and Send	217593458d3820748696d145061aa2c3cca4106500e3f11eec11821514b37f50
+https://github.com/rust-lang/nomicon/issues/509	retrieved	Exception safety statement regarding Box contradicted by std docs	e37957d12d7c5269dd9381a57446c4e0f31cf003e237d4d0dd8d2af8b27a01e4
+https://github.com/rust-lang/nomicon/issues/521	retrieved	It would be nice to clarify "dangling" definition	2f8ce506b5229dcb1a9cdeb0214f0f51b58218b8b8b32a86d4a6f4310b8b2074
+https://github.com/rust-lang/nomicon/issues/527	retrieved	"Improperly reduced borrows" can be updated soon.	06b836070ab0d3145cc4ccde994af6c236fde0f3da994f00aba33f0e9abb06f5
+https://github.com/rust-lang/rust/blob/main/compiler/rustc_expand/src/base.rs	retrieved	rust/compiler/rustc_expand/src/base.rs at main · rust-lang/rust	5841d02577011f569804d090648969189c422a7c4da0175a1371c77eb13dd327
+https://github.com/rust-lang/rust/blob/master/LICENSE-APACHE	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://github.com/rust-lang/rust/blob/master/LICENSE-MIT	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://github.com/rust-lang/rust/issues/94780	retrieved	Tracking Issue for `Iterator::collect_into`	071b6514f7b7a702636a724aab2b13a5bae708a67fd726ba17374a4941091812
+https://github.com/rust-lang/rust/releases/tag/1.99.0	retrieved	Release Rust 1.99.0 · rust-lang/rust	ddc059d0ee214f1ff9eb92e22d1f4e5ba26d51f246fa5ceda5188cde2990699a
+https://github.com/rust-lang/rustfmt/issues/4107	retrieved	Opinionated sorting of `use` statement blocks	7b58521aa30b52e683f0f3b479f197bacd00027386a1090a30293641f732bbb9
+https://github.com/seanmonstar/reqwest/blob/master/src/async_impl/client.rs	retrieved	reqwest/src/async_impl/client.rs at master · seanmonstar/reqwest	494cf662dab537e97612dc47c9934b14be9a754ed2660d7edb288c4595ebadaf
+https://github.com/sharkdp/fd/blob/master/src/walk.rs	retrieved	fd/src/walk.rs at master · sharkdp/fd · GitHub	96cdfe02d78a30967ee55cbd850507990e2a76fce111f00b25a0a41ede9a3c4f
+https://github.com/tokio-rs/tokio/blob/master/benches/sync_mpsc.rs	retrieved	tokio/benches/sync_mpsc.rs at master · tokio-rs/tokio	0c822317b7b341b04c18df37682d8a52612b1384e991033c53fc620c43f6f221
+https://github.com/user/my-crate	illustrative placeholder; no technical evidence		
+https://github.com/user/repo	illustrative placeholder; no technical evidence		
+https://github.com/username/my-awesome-crate	illustrative placeholder; no technical evidence		
+https://img.shields.io/badge/Rust-2024%20edition-orange	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://img.shields.io/badge/categories-26-blue	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://img.shields.io/badge/license-MIT-green	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://img.shields.io/badge/rules-265-blue	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://insta.rs/docs/quickstart/	retrieved	Getting Started	78d2b5909034d2469964ca64f280eea8c98ce41c65bd253bcaba33fa3e71a191
+https://insta.rs/docs/redactions/	retrieved	Redactions	71c3918b6610d6304382d4ef6c00b54edd6aab88e7c4426afd39949507af0a0f
+https://keepachangelog.com/	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://marabos.nl/atomics/	retrieved	Rust Atomics and Locks by Mara Bos	c52d17f926b9ca1f8598fb0e3ea2d719b1dd261152863808af13aab519270d71
+https://martinfowler.com/bliki/FlagArgument.html	retrieved	Flag Argument	935931f13d78bfad948edc5870005f6b46de70fa36c7ccea205a6ce0081d8b09
+https://martinfowler.com/books/refactoring.html	retrieved	Refactoring	210eed2a37fc1b264ba9e55af4d486bcf17b80bef3b065b645b7f51e2411af0f
+https://microsoft.github.io/RustTraining/async-book/	retrieved	Async Rust: From Futures to Production	9dc6981f58403305996dd56d928437dc4e9c72e95e0f18a03144b69275f19199
+https://microsoft.github.io/RustTraining/async-book/ch00-introduction.html	retrieved	Async Rust: From Futures to Production	3898bd7db79e02c4846c2670ab98ee85eabbf712ea52559691412bb78f3f115b
+https://microsoft.github.io/RustTraining/async-book/ch01-why-async-is-different-in-rust.html	retrieved	1. Why Async is Different in Rust	e8938ca790e93ef9022cfa461beb1ba993c9e96ef30a9a26c54bcfd52c6253de
+https://microsoft.github.io/RustTraining/async-book/ch02-the-future-trait.html	retrieved	2. The Future Trait - Async Rust: From Futures to Production	d0e318c3d116b188b67786b42e21768c77e444741a266e085fb65e7a7271a42d
+https://microsoft.github.io/RustTraining/async-book/ch03-how-poll-works.html	retrieved	3. How Poll Works - Async Rust: From Futures to Production	d4cfabd1b3790bfada14beb2a932840fbe6389c470da76946725dfc2ea247ac4
+https://microsoft.github.io/RustTraining/async-book/ch04-pin-and-unpin.html	retrieved	4. Pin and Unpin - Async Rust: From Futures to Production	d5673ff48dd97ad821dc9f209b62874278525b90c3eb10b7989d6eba81372d29
+https://microsoft.github.io/RustTraining/async-book/ch05-the-state-machine-reveal.html	retrieved	5. The State Machine Reveal	d679fe7525f1c68e356c08b27f21f5563d6f78f24e04cb9537b65ecdbb6d8afe
+https://microsoft.github.io/RustTraining/async-book/ch06-building-futures-by-hand.html	retrieved	6. Building Futures by Hand	1ff2eb1be1e05f7b9394a57574037e2b98501dba71e6cede6ac418d5f24e473a
+https://microsoft.github.io/RustTraining/async-book/ch07-executors-and-runtimes.html	retrieved	7. Executors and Runtimes - Async Rust: From Futures to Production	5db4a70ab28bd3f54f6e5bbcaf11f07a39bc0088a64f9de7ba466d17653e2d69
+https://microsoft.github.io/RustTraining/async-book/ch08-tokio-deep-dive.html	retrieved	8. Tokio Deep Dive - Async Rust: From Futures to Production	7b6fe4e3c48779d22fd864b5e9339422af139e470839e0e3fad047c2552e93bd
+https://microsoft.github.io/RustTraining/async-book/ch09-when-tokio-isnt-the-right-fit.html	retrieved	9. When Tokio Isn't the Right Fit	5a0e9821a7c8ca28f3eeba1648d3102fa9cb1ba6711595a390cc90247922b8cb
+https://microsoft.github.io/RustTraining/async-book/ch10-async-traits.html	retrieved	10. Async Traits - Async Rust: From Futures to Production	303f14f63be316015c252ed3f3fe78f4f1679c45a8e21bc292602ea398da61d0
+https://microsoft.github.io/RustTraining/async-book/ch11-streams-and-asynciterator.html	retrieved	11. Streams and AsyncIterator - Async Rust: From Futures to Production	f6f7a5dde1df1168cc9266548937ef96777950acb5a9975790b9e857c8fead2d
+https://microsoft.github.io/RustTraining/async-book/ch12-common-pitfalls.html	retrieved	12. Common Pitfalls - Async Rust: From Futures to Production	94656f2e87589690d4a01a5e4b2477cb0e96b37ad9f7af1791749cf287932c6a
+https://microsoft.github.io/RustTraining/async-book/ch13-production-patterns.html	retrieved	13. Production Patterns - Async Rust: From Futures to Production	d838c1875ea9ef8c7d2eac1aeb3a71af3aa2226b9e1578abebb725c34cbb5bdb
+https://microsoft.github.io/RustTraining/async-book/ch14-async-is-an-optimization-not-an-architecture.html	retrieved	14. Async Is an Optimization, Not an Architecture	ab99af490c6f6e3d02dfe622d94c7fb94e633adcc3245a1c95f77b7c50fc1fb0
+https://microsoft.github.io/RustTraining/async-book/ch15-exercises.html	retrieved	Async Rust: From Futures to Production	988b9fa9eaad3aa2f501100529925f4ad048ac7940025abbca99e5a90a00a30f
+https://microsoft.github.io/RustTraining/async-book/ch16-summary-and-reference-card.html	retrieved	Summary and Reference Card - Async Rust: From Futures to Production	66014d89258a69575a45b8bade9834a8ee78b37222fa810951d1a9e0b0358433
+https://microsoft.github.io/RustTraining/async-book/ch17-capstone-project.html	retrieved	Capstone Project: Async Chat Server	1609cec25d85934f7b0eabfeb590c96fad8a2c586743cf2b1aee4c7af5c75ca4
+https://microsoft.github.io/RustTraining/c-cpp-book/	retrieved	Introduction - Rust for C/C++ Programmers	dfbf6e4e443e2f04f2c473e00bbf0e2e4275af35cdb6dea088c7b1f0c08fd74e
+https://microsoft.github.io/RustTraining/c-cpp-book/ch00-introduction.html	retrieved	Introduction - Rust for C/C++ Programmers	e7837af4e3cfa9dcc0a77dead7cd4a6f6dffa603169b18c2093368afa0018736
+https://microsoft.github.io/RustTraining/c-cpp-book/ch01-1-why-c-cpp-developers-need-rust.html	retrieved	Why C/C++ Developers Need Rust	3db5a9be84cd897c6b0e9daccf5d0637479a06d63b4d416976d0fbf9d60356e1
+https://microsoft.github.io/RustTraining/c-cpp-book/ch01-introduction-and-motivation.html	retrieved	1. Introduction and Motivation - Rust for C/C++ Programmers	401dd5d30de740bb7af84db7daed271c84c5ecc0687d5b2d5d173442cf413f72
+https://microsoft.github.io/RustTraining/c-cpp-book/ch02-getting-started.html	retrieved	2. Getting Started - Rust for C/C++ Programmers	117d55ba34ab520d98d89f1628b8730eaebde7dc54a9b4b483a4003a8fe8a004
+https://microsoft.github.io/RustTraining/c-cpp-book/ch03-built-in-types.html	retrieved	3. Built-in Types - Rust for C/C++ Programmers	c09faef9d46aa36293b823bde8de467502ec4c42035e6bf1690a51042e1023a5
+https://microsoft.github.io/RustTraining/c-cpp-book/ch04-control-flow.html	retrieved	4. Control Flow - Rust for C/C++ Programmers	d5a3bac265c50d71f61a19fd91fc6757e53ede78820b56de258158290d35b749
+https://microsoft.github.io/RustTraining/c-cpp-book/ch05-data-structures.html	retrieved	5. Data Structures - Rust for C/C++ Programmers	b4288ce5713829790a717e71a89f011e7e008ab70c43548b8c04f2fbe6aec6d4
+https://microsoft.github.io/RustTraining/c-cpp-book/ch06-enums-and-pattern-matching.html	retrieved	6. Enums and Pattern Matching	875fbe7e22e08ac2a75892fec78ca8ea2307a800a8b8f8d76d267edc58821aff
+https://microsoft.github.io/RustTraining/c-cpp-book/ch07-1-lifetimes-and-borrowing-deep-dive.html	retrieved	Lifetimes and Borrowing Deep Dive	3c4557aea6fc751d6ee063c6c3bec719cec7c3fe5aaa042b4568d59a3bdc8c47
+https://microsoft.github.io/RustTraining/c-cpp-book/ch07-2-smart-pointers-and-interior-mutability.html	retrieved	Smart Pointers and Interior Mutability	67a5d0b973b51491c80751632fd6d21383c8d760b46f892cc568efb3e9681ed8
+https://microsoft.github.io/RustTraining/c-cpp-book/ch07-ownership-and-borrowing.html	retrieved	7. Ownership and Borrowing - Rust for C/C++ Programmers	24cbd5b1aa5e3cb404947efa455fabf139dfeffccb94eb40366df5e5e279dd45
+https://microsoft.github.io/RustTraining/c-cpp-book/ch08-1-testing-patterns.html	retrieved	Testing Patterns - Rust for C/C++ Programmers	94656c938cbdda1bf7ea433e3c3d8ed47c38b96ab3a44bfa79a6845157edf497
+https://microsoft.github.io/RustTraining/c-cpp-book/ch08-crates-and-modules.html	retrieved	8. Crates and Modules - Rust for C/C++ Programmers	ebfb53e3f98825ee56f1f461f34d7b865320c58efa480b1f5ec488b3720679c2
+https://microsoft.github.io/RustTraining/c-cpp-book/ch09-1-error-handling-best-practices.html	retrieved	Error Handling Best Practices - Rust for C/C++ Programmers	70cb99427568f648644a74a5f39c3e3a0c2e4fdb5c7da8ca845534e047f61a4e
+https://microsoft.github.io/RustTraining/c-cpp-book/ch09-error-handling.html	retrieved	9. Error Handling - Rust for C/C++ Programmers	0fde8737084bb164ae98be15925fd22320c3445e92a9a3506dae71de975ba487
+https://microsoft.github.io/RustTraining/c-cpp-book/ch10-1-generics.html	retrieved	Generics - Rust for C/C++ Programmers	89f889835af60e164978d4dd95d514ca24c50fef5458155df40a18bde04570c6
+https://microsoft.github.io/RustTraining/c-cpp-book/ch10-traits.html	retrieved	10. Traits - Rust for C/C++ Programmers	05f4e887e07c06d4b08d07414f2c02e9381d35b830af6eecc2cacde29411cb43
+https://microsoft.github.io/RustTraining/c-cpp-book/ch11-from-and-into-traits.html	retrieved	11. From and Into Traits	169517a374a1be12fa4385de421b1cbd52473e1de88b0faccec4673b85aea04b
+https://microsoft.github.io/RustTraining/c-cpp-book/ch12-1-iterator-power-tools.html	retrieved	Iterator Power Tools - Rust for C/C++ Programmers	d049bc92dc96e4b4d30400ce3e1aa5b6416ac33ee01421043fc928249a4451a0
+https://microsoft.github.io/RustTraining/c-cpp-book/ch12-closures.html	retrieved	12. Closures - Rust for C/C++ Programmers	19fb6fbf1932da8653120b036a96a2b804fb52192cb31d397367628f3fa2ab9e
+https://microsoft.github.io/RustTraining/c-cpp-book/ch13-concurrency.html	retrieved	13. Concurrency - Rust for C/C++ Programmers	2e0dcd3e400c7882e10eaf58bae4fa15f1fc1a5f8589bf860a503aa95b2fbb1b
+https://microsoft.github.io/RustTraining/c-cpp-book/ch14-unsafe-rust-and-ffi.html	retrieved	14. Unsafe Rust and FFI	9a47cf61aa398290ed783b59261fb96ad3e3be18e491f90b7219728aa16472c4
+https://microsoft.github.io/RustTraining/c-cpp-book/ch15-1-embedded-deep-dive.html	retrieved	Embedded Deep Dive - Rust for C/C++ Programmers	f06589f7b2664586c7496415d5e92951dd17ffb972d56987a95989aeecf13127
+https://microsoft.github.io/RustTraining/c-cpp-book/ch15-no_std-rust-without-the-standard-library.html	retrieved	15. no_std — Rust Without the Standard Library	4724db8a563684520f7ba74ad5666f9a14479558657ca548faf3830e18d247fb
+https://microsoft.github.io/RustTraining/c-cpp-book/ch16-1-case-study-lifetime-borrowing.html	unavailable; omitted with user approval	Page not found · GitHub Pages	1a1b1b7d3fd7c121943d4507d07acd51c608db8f3471b54065fb6d7e6233b2f7
+https://microsoft.github.io/RustTraining/c-cpp-book/ch16-case-studies.html	retrieved	16. Case Studies: Real-World C++ to Rust	a9e9e30dadad09f25684cad1e9581682b6cf42450c30976b64c95f9dcd43acdf
+https://microsoft.github.io/RustTraining/c-cpp-book/ch16-cases-3-5-lifetime-borrowing.html	retrieved	Case Studies 3–5: Lifetimes, Composability, Trait Objects	11e08b66fad1d46f03e8260c6552dae7092937b115bf7d78fe58d85513de7a7e
+https://microsoft.github.io/RustTraining/c-cpp-book/ch17-1-avoiding-excessive-clone.html	retrieved	Avoiding Excessive clone() - Rust for C/C++ Programmers	44ea4c9834cc81162369bdec994ffa6b328a8bfdf2b8d0c63a98e58352a6b670
+https://microsoft.github.io/RustTraining/c-cpp-book/ch17-2-avoiding-unchecked-indexing.html	retrieved	Avoiding Unchecked Indexing - Rust for C/C++ Programmers	37e20c173ed2b3e3f610c40527d18a95d6f1aca581d9f15cb668128e0a84a7c8
+https://microsoft.github.io/RustTraining/c-cpp-book/ch17-3-collapsing-assignment-pyramids.html	retrieved	Collapsing Assignment Pyramids - Rust for C/C++ Programmers	b79b75f649691fa98d5435d791928fddc7d83744557134ce6585b12fa6c742cf
+https://microsoft.github.io/RustTraining/c-cpp-book/ch17-4-logging-and-tracing-ecosystem.html	retrieved	Logging and Tracing Ecosystem - Rust for C/C++ Programmers	3f621ac6ed874a6b4dc39e2ffbbe47c8b6e4fde15ebaa2c90cd3187ca4a339fa
+https://microsoft.github.io/RustTraining/c-cpp-book/ch17-best-practices.html	retrieved	17. Best Practices - Rust for C/C++ Programmers	0c44462b6d3ca97aeba12505430c096d1340e1e3b74b27a4d5980ee21d63a853
+https://microsoft.github.io/RustTraining/c-cpp-book/ch18-cpp-rust-semantic-deep-dives.html	retrieved	18. C++ → Rust Semantic Deep Dives	66a1f0d48087bed0b3480b0c94a3768e0df544bb6246cb2610e9182cdedd70cf
+https://microsoft.github.io/RustTraining/c-cpp-book/ch19-macros.html	retrieved	19. Rust Macros: From Preprocessor to Metaprogramming	e502ab07984ecd79df63ea11ad2a0173fef8eae6963885410f71403b63ada59d
+https://my-awesome-crate.dev	illustrative placeholder; no technical evidence		
+https://nnethercote.github.io/perf-book/	retrieved	Title Page - The Rust Performance Book	917c4045155e3ca10d6ad21ecbf23347ce9de04ac5d3cc5ef9bc5d5ae8619e3c
+https://raw.githubusercontent.com/leonardomso/rust-skills/master/SKILL.md	metadata, licensing, provenance, or general background; no Rust contract adopted		
+https://rust-lang.github.io/api-guidelines/	retrieved	About - Rust API Guidelines	bb1e357973c05a18538f09ff1d367673810aef7f4e909b6ad254c17899cc4bb9
+https://rust-lang.github.io/rust-clippy/	retrieved	Clippy lints documentation	f9294a8a889c50753416c09c709466007d2b06084bb89e871b16f79abdae2f4e
+https://rust-lang.github.io/rust-clippy/master/	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#clone_on_copy	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#empty_docs	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#large_enum_variant	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#manual_ok_or	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#map_unwrap_or	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#missing_errors_doc	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#missing_panics_doc	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#missing_safety_doc	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#needless_borrow	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#needless_collect	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#redundant_clone	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#unnecessary_map_or	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#unnecessary_result_map_or_else	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/#unnecessary_wraps	retrieved	Clippy Lints Total number: 837	da7e5a9fdd6aedcbee7471073d2ef9abdee86f4415f659771825656c619deccf
+https://rust-lang.github.io/rust-clippy/master/index.html	retrieved	Clippy Lints Total number: 837	cfc8862184f9b1fb95fc05c795df029eeed145dce1714753a64e0a68deb7cad4
+https://rust-lang.github.io/rust-clippy/master/index.html#fn_params_excessive_bools	retrieved	Clippy Lints Total number: 837	cfc8862184f9b1fb95fc05c795df029eeed145dce1714753a64e0a68deb7cad4
+https://rust-unofficial.github.io/patterns/	retrieved	Introduction - Rust Design Patterns	01e65c29abeacdf59b81f3d73910bfae5be1930d719c93b5f274553f82cd7401
+https://rust.testcontainers.org/	retrieved	Testcontainers for Rust	8b8aad248f40749042de4c0c1bc7470e252d54a7744407fac00f32c05503f0fa
+https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction	retrieved	The Wrong Abstraction — Sandi Metz	35563736c69b6fa77170daeab6543fccb51ab84a33c7c2317b2d4fad9798bbe6
+https://serde.rs	general background link; no technical claim adopted		
+https://serde.rs/	retrieved	Overview · Serde	b70cdec1282f0abdfda0d3e9b53507ddc9042efb138821420405d93de9065651
+https://swiftology.io/articles/typestate/	general background link; no technical claim adopted		
+https://testing.googleblog.com/2019/12/testing-on-toilet-tests-too-dry-make.html	retrieved	Testing on the Toilet: Tests Too DRY? Make Them DAMP!	e89868acdd66dac0f185f5274ba66c30abfc5c27256cf26b8b798c898d19e06d
+https://www.youtube.com/watch?v=Ag_6Q44PBNs	metadata, licensing, provenance, or general background; no Rust contract adopted		
