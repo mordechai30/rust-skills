@@ -212,3 +212,15 @@ Compilation and behavior tests provide example-level evidence; soundness still
 requires the documented invariant, and performance claims require workload  
 measurements. Fresh-agent/model evaluations are specified separately and must  
 not be reported as completed unless actually run.
+
+## Focused revision on 2026-10-08
+
+The entrypoint now gives explicit use/avoid instructions rather than routing alone.  
+The four cpp comparison references add paired examples of material differences in ownership,  
+borrowing, task behavior, safety, text/data validity, traits, and public API contracts.  
+The supplied CppRef_vs_RustRef.md also informed lifetime and exclusive-access examples.  
+Useful existing technical references and executable examples were preserved.
+
+The earlier inventory files remain provenance of the original synthesis. They are not a claim  
+that every newly reachable API or external page was read in this revision. This review follows  
+listed sources and relevant linked contracts; it does not claim an exhaustive whole-web crawl.
