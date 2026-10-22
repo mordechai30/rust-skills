@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rust Instructions"
+  short_description: "Clear, safe Rust and measured performance"
