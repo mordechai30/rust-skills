@@ -1,0 +1,25 @@
+﻿# Summary
+
+[About](./guidelines/README.md)
+[Checklist](./guidelines/checklist/README.md)
+
+- [Universal](./guidelines/universal/README.md)
+- [Libraries](./guidelines/libs/README.md)
+  - [Interoperability](./guidelines/libs/interop/README.md)
+  - [UX](./guidelines/libs/ux/README.md)
+  - [Resilience](./guidelines/libs/resilience/README.md)
+  - [Building](./guidelines/libs/building/README.md)
+- [Macros](./guidelines/macros/README.md)
+- [Applications](./guidelines/apps/README.md)
+- [FFI](./guidelines/ffi/README.md)
+- [Correctness](./guidelines/correctness/README.md)
+- [Performance](./guidelines/performance/README.md)
+- [Project](./guidelines/project/README.md)
+- [Documentation](./guidelines/docs/README.md)
+- [AI](./guidelines/ai/README.md)
+
+---
+
+[Agent Skill](./agents/README.md)
+[Changelog](./changelog/README.md)
+[FAQ](./FAQ/README.md)

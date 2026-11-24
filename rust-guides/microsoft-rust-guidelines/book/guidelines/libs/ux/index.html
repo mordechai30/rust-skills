@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>UX - Pragmatic Rust Guidelines</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style/tags-4fcedefa.css">
+        <link rel="stylesheet" href="../../../style/fixes-0b4cbbb0.css">
+        <link rel="stylesheet" href="../../../style/guideline-meta-343b6e44.css">
+        <link rel="stylesheet" href="../../../style/build-date-66ecebe2.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../../searchindex-3da55094.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../../toc-e8ca1a93.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Pragmatic Rust Guidelines</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/microsoft/rust-guidelines" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h1 id="libraries--ux-guidelines"><a class="header" href="#libraries--ux-guidelines">Libraries / UX Guidelines</a></h1>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-SIMPLE-ABSTRACTIONS"><a class="header" href="#M-SIMPLE-ABSTRACTIONS">Abstractions don’t visibly nest (M-SIMPLE-ABSTRACTIONS)</a></h2>
+<p><why>low cognitive load and a good out-of-the-box UX.</why></p>
+<p>When designing your public types and primary API surface, avoid exposing nested or complex parametrized types to your users.</p>
+<p>While powerful, type parameters introduce a cognitive load, even more so if the involved traits are crate-specific. Type parameters
+become infectious to user code holding on to these types in their fields, often come with complex trait hierarchies on their own, and
+might cause confusing error messages.</p>
+<p>From the perspective of a user authoring <code>Foo</code>, where the other structs come from your crate:</p>
+<pre><code class="language-rust ignore">struct Foo {
+    service: Service // Great
+    service: Service&lt;Backend&gt; // Acceptable
+    service: Service&lt;Backend&lt;Store&gt;&gt; // Bad
+
+    list: List&lt;Rc&lt;u32&gt;&gt; // Great, `List&lt;T&gt;` is simple container,
+                        // other types user provided.
+
+    matrix: Matrix4x4 // Great
+    matrix: Matrix4x4&lt;f32&gt; // Still ok
+    matrix: Matrix&lt;f32, Const&lt;4&gt;, Const&lt;4&gt;, ArrayStorage&lt;f32, 4, 4&gt;&gt; // ?!?
+}</code></pre>
+<p><em>Visible</em> type parameters should be avoided in <em>service-like</em> types (i.e., types mainly instantiated once per thread / application that are often passed
+as dependencies), in particular if the nestee originates from the same crate as the service.</p>
+<p>Containers, smart-pointers and similar data structures obviously must expose a type parameter, e.g., <code>List&lt;T&gt;</code> above. Even then, care should
+be taken to limit the number and nesting of parameters.</p>
+<p>To decide whether type parameter nesting should be avoided, consider these factors:</p>
+<ul>
+<li>Will the type be <strong>named</strong> by your users?
+<ul>
+<li>Service-level types are always expected to be named (e.g., <code>Library&lt;T&gt;</code>),</li>
+<li>Utility types, such as the many <a href="https://doc.rust-lang.org/stable/std/iter/index.html"><code>std::iter</code></a> types like <code>Chain</code>, <code>Cloned</code>, <code>Cycle</code>, are not
+expected to be named.</li>
+</ul>
+</li>
+<li>Does the type primarily compose with non-user types?</li>
+<li>Do the used type parameters have complex bounds?</li>
+<li>Do the used type parameters affect inference in other types or functions?</li>
+</ul>
+<p>The more of these factors apply, the bigger the cognitive burden.</p>
+<p>As a rule of thumb, primary service API types should not nest <em>on their own volition</em>, and if they do, only 1 level deep. In other words, these
+APIs should not require users having to deal with an <code>Foo&lt;Bar&lt;FooBar&gt;&gt;</code>. However, if <code>Foo&lt;T&gt;</code> users want to bring their own <code>A&lt;B&lt;C&gt;&gt;</code> as <code>T</code> they
+should be free to do so.</p>
+<blockquote>
+<h3 id="type-magic-for-better-ux"><a class="header" href="#type-magic-for-better-ux"><tip></tip> Type Magic for Better UX?</a></h3>
+<p>The guideline above is written with ‘bread-and-butter’ types in mind you might create during  <em>normal</em> development activity. Its intention is to
+reduce friction users encounter when working with your code.</p>
+<p>However, when designing API patterns and ecosystems at large, there might be valid reasons to introduce intricate type magic to overall <em>lower</em>
+the cognitive friction involved, <a href="https://docs.rs/bevy_ecs/latest/bevy_ecs/">Bevy’s ECS</a> or
+<a href="https://docs.rs/axum/latest/axum/handler/trait.Handler.html">Axum’s request handlers</a> come to mind.</p>
+<p>The threshold where this pays off is high though. If there is any doubt about the utility of your creative use of generics, your users might be
+better off without them.
+﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+</blockquote>
+<h2 id="M-AVOID-WRAPPERS"><a class="header" href="#M-AVOID-WRAPPERS">Avoid smart pointers and wrappers in APIs (M-AVOID-WRAPPERS)</a></h2>
+<p><why>low cognitive load and ergonomic APIs.</why></p>
+<p>As a specialization of <a href="./#M-ABSTRACTIONS-DONT-NEST">M-ABSTRACTIONS-DONT-NEST</a>, generic wrappers and smart pointers like
+<code>Rc&lt;T&gt;</code>, <code>Arc&lt;T&gt;</code>, <code>Box&lt;T&gt;</code>, or <code>RefCell&lt;T&gt;</code> should be avoided in public APIs.</p>
+<p>From a user perspective these are mostly implementation details, and introduce infectious complexity that users have to
+resolve. In fact, these might even be impossible to resolve once multiple crates disagree about the required type of wrapper.</p>
+<p>If wrappers are needed internally, they should be hidden behind a clean API that uses simple types like <code>&amp;T</code>, <code>&amp;mut T</code>, or <code>T</code> directly. Compare:</p>
+<pre><code class="language-rust ignore">// Good: simple API
+pub fn process_data(data: &amp;Data) -&gt; State { ... }
+pub fn store_config(config: Config) -&gt; Result&lt;(), Error&gt; { ... }
+
+// Bad: Exposing implementation details
+pub fn process_shared(data: Arc&lt;Mutex&lt;Shared&gt;&gt;) -&gt; Box&lt;Processed&gt; { ... }
+pub fn initialize(config: Rc&lt;RefCell&lt;Config&gt;&gt;) -&gt; Arc&lt;Server&gt; { ... }</code></pre>
+<p>Smart pointers in APIs are acceptable when:</p>
+<ul>
+<li>
+<p>The smart pointer is fundamental to the API’s purpose (e.g., a new container lib)</p>
+</li>
+<li>
+<p>The smart pointer, based on benchmarks, significantly improves performance and the complexity is justified.</p>
+</li>
+</ul>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-DI-HIERARCHY"><a class="header" href="#M-DI-HIERARCHY">Prefer types over generics, generics over dyn traits (M-DI-HIERARCHY)</a></h2>
+<p><why>composable patterns and freedom from design lock-in.</why></p>
+<p>When asking for async dependencies, prefer concrete types over generics, and generics over <code>dyn Trait</code>.</p>
+<p>It is easy to accidentally deviate from this pattern when porting code from languages like C# that heavily rely on interfaces.
+Consider you are porting a service called <code>Database</code> from C# to Rust and, inspired by the original <code>IDatabase</code> interface, you naively translate it into:</p>
+<pre><code class="language-rust ignore">trait Database {
+    async fn update_config(&amp;self, file: PathBuf);
+    async fn store_object(&amp;self, id: Id, obj: Object);
+    async fn load_object(&amp;self, id: Id) -&gt; Object;
+}
+
+impl Database for MyDatabase { ... }
+
+// Intended to be used like this:
+async fn start_service(b: Rc&lt;dyn Database&gt;) { ... }</code></pre>
+<p>Apart from not feeling idiomatic, this approach precludes other Rust constructs that conflict with object safety,
+can cause issues with asynchronous code, and exposes wrappers (compare <a href="./#M-AVOID-WRAPPERS">M-AVOID-WRAPPERS</a>).</p>
+<p>Instead, when more than one implementation is needed, this <em>design escalation ladder</em> should be followed:</p>
+<p>If the other implementation is only concerned with providing a <em>sans-io</em> implementation for testing, implement your type as an
+enum, following <a href="../resilience/#M-MOCKABLE-SYSCALLS">M-MOCKABLE-SYSCALLS</a> instead.</p>
+<p>If users are expected to provide custom implementations, you should introduce one or more traits, and implement them for your own types
+<em>on top</em> of your inherent functions. Each trait should be relatively narrow, e.g., <code>StoreObject</code>, <code>LoadObject</code>. If eventually a single
+trait is needed it should be made a subtrait, e.g., <code>trait DataAccess: StoreObject + LoadObject {}</code>.</p>
+<p>Code working with these traits should ideally accept them as generic type parameters as long as their use does not contribute to significant nesting
+(compare <a href="./#M-ABSTRACTIONS-DONT-NEST">M-ABSTRACTIONS-DONT-NEST</a>).</p>
+<pre><code class="language-rust ignore">// Good, generic does not have infectious impact, uses only most specific trait
+async fn read_database(x: impl LoadObject) { ... }
+
+// Acceptable, unless further nesting makes this excessive.
+struct MyService&lt;T: DataAccess&gt; {
+    db: T,
+}</code></pre>
+<p>Once generics become a nesting problem, <code>dyn Trait</code> can be considered. Even in this case, visible wrapping should be avoided, and custom wrappers should be preferred.</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">use std::sync::Arc;
+</span><span class="boring">trait DataAccess {
+</span><span class="boring">    fn foo(&amp;self);
+</span><span class="boring">}
+</span>// This allows you to expand or change `DynamicDataAccess` later. You can also
+// implement `DataAccess` for `DynamicDataAccess` if needed, and use it with
+// regular generic functions.
+struct DynamicDataAccess(Arc&lt;dyn DataAccess&gt;);
+
+impl DynamicDataAccess {
+    fn new&lt;T: DataAccess + 'static&gt;(db: T) -&gt; Self {
+        Self(Arc::new(db))
+    }
+}
+
+struct MyService {
+    db: DynamicDataAccess,
+}
+<span class="boring">}</span></code></pre>
+<p>The generic wrapper can also be combined with the enum approach from <a href="../resilience/#M-MOCKABLE-SYSCALLS">M-MOCKABLE-SYSCALLS</a>:</p>
+<pre><code class="language-rust ignore">enum DataAccess {
+    MyDatabase(MyDatabase),
+    Mock(mock::MockCtrl),
+    Dynamic(DynamicDataAccess)
+}
+
+async fn read_database(x: &amp;DataAccess) { ... }</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-ERRORS-CANONICAL-STRUCTS"><a class="header" href="#M-ERRORS-CANONICAL-STRUCTS">Errors are canonical structs (M-ERRORS-CANONICAL-STRUCTS)</a></h2>
+<p><why>harmonized error types and consistent error handling.</why></p>
+<p>Errors should be a situation-specific <code>struct</code> that contain a <a href="https://doc.rust-lang.org/stable/std/backtrace/struct.Backtrace.html"><code>Backtrace</code></a>,
+a possible upstream error cause, and helper methods.</p>
+<p>Simple crates usually expose a single error type <code>Error</code>, complex crates may expose multiple types, for example
+<code>AccessError</code> and <code>ConfigurationError</code>. Error types should provide helper methods for additional information that allows callers to handle the error.</p>
+<p>A simple error might look like so:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">use std::backtrace::Backtrace;
+</span><span class="boring">use std::fmt::Display;
+</span><span class="boring">use std::fmt::Formatter;
+</span>pub struct ConfigurationError {
+    backtrace: Backtrace,
+}
+
+impl ConfigurationError {
+    pub(crate) fn new() -&gt; Self {
+        Self { backtrace: Backtrace::capture() }
+    }
+}
+
+// Impl Debug + Display
+<span class="boring">}</span></code></pre>
+<p>Where appropriate, error types should provide contextual error information, for example:</p>
+<pre><code class="language-rust ignore"><span class="boring">use std::backtrace::Backtrace;
+</span><span class="boring">#[derive(Debug)]
+</span><span class="boring">pub struct ConfigurationError {
+</span><span class="boring">   backtrace: Backtrace,
+</span><span class="boring">}
+</span>impl ConfigurationError {
+    pub fn config_file(&amp;self) -&gt; &amp;Path { }
+}</code></pre>
+<p>If your API does mixed operations, or depends on various upstream libraries, store an <code>ErrorKind</code>.
+Error kinds, and more generally enum-based errors, should not be used to avoid creating separate public error types when there is otherwise no error overlap:</p>
+<pre><code class="language-rust ignore">// Prefer this
+fn download_iso() -&gt; Result&lt;(), DownloadError&gt; {}
+fn start_vm() -&gt; Result&lt;(), VmError&gt; {}
+
+// Over that
+fn download_iso() -&gt; Result&lt;(), GlobalEverythingErrorEnum&gt; {}
+fn start_vm() -&gt; Result&lt;(), GlobalEverythingErrorEnum&gt; {}
+
+// However, not every function warrants a new error type. Errors
+// should be general enough to be reused.
+fn parse_json() -&gt; Result&lt;(), ParseError&gt; {}
+fn parse_toml() -&gt; Result&lt;(), ParseError&gt; {}</code></pre>
+<p>If you do use an inner <code>ErrorKind</code>, that enum should not be exposed directly for future-proofing reasons,
+as otherwise you would expose your callers to <em>all</em> possible failure modes, even the ones you consider internal
+and unhandleable. Instead, expose various <code>is_xxx()</code> methods as shown below:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">use std::backtrace::Backtrace;
+</span><span class="boring">use std::fmt::Display;
+</span><span class="boring">use std::fmt::Formatter;
+</span>#[derive(Debug)]
+pub(crate) enum ErrorKind {
+    Io(std::io::Error),
+    Protocol
+}
+
+#[derive(Debug)]
+pub struct HttpError {
+    kind: ErrorKind,
+    backtrace: Backtrace,
+}
+
+impl HttpError {
+    pub fn is_io(&amp;self) -&gt; bool { matches!(self.kind, ErrorKind::Io(_)) }
+    pub fn is_protocol(&amp;self) -&gt; bool { matches!(self.kind, ErrorKind::Protocol) }
+}
+<span class="boring">}</span></code></pre>
+<p>Most upstream errors don’t provide a backtrace. You should capture one when creating an <code>Error</code> instance, either via one of
+your <code>Error::new()</code> flavors, or when implementing <code>From&lt;UpstreamError&gt; for Error {}</code>.</p>
+<p>Error structs must properly implement <code>Display</code> that renders as follows:</p>
+<pre><code class="language-rust ignore">impl Display for MyError {
+    // Print a summary sentence what happened.
+    // Print `self.backtrace`.
+    // Print any additional upstream 'cause' information you might have.
+<span class="boring">  fn fmt(&amp;self, f: &amp;mut Formatter&lt;'_&gt;) -&gt; std::fmt::Result {
+</span><span class="boring">      todo!()
+</span><span class="boring">  }
+</span>}</code></pre>
+<p>Errors must also implement <code>std::error::Error</code>:</p>
+<pre><code class="language-rust ignore">impl std::error::Error for MyError { }</code></pre>
+<p>Lastly, if you happen to emit lots of errors from your crate, consider creating a private <code>bail!()</code> helper macro to simplify error instantiation.</p>
+<blockquote>
+<h3 id="when-you-get-backtraces"><a class="header" href="#when-you-get-backtraces"><tip></tip> When You Get Backtraces</a></h3>
+<p>Backtraces are an invaluable debug tool in complex or async code, since  errors might <em>travel</em> far through a callstack before being surfaced.</p>
+<p>That said, they are a <em>development</em> tool, not a <em>runtime</em> diagnostic, and by default <code>Backtrace::capture()</code> will <strong>not</strong> capture
+backtraces, as they have a large overhead, e.g., 4μs per capture on the author’s PC.</p>
+<p>Instead, Rust evaluates a <a href="https://doc.rust-lang.org/stable/std/backtrace/index.html#environment-variables">set of environment variables</a>, such as
+<code>RUST_BACKTRACE</code>, and only walks the call frame when explicitly asked. Otherwise it captures an empty trace, at the cost of only a few CPU instructions.</p>
+</blockquote>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-FROM-ERROR"><a class="header" href="#M-FROM-ERROR">Canonical error conversion uses <code>From</code>, not <code>map_err</code> (M-FROM-ERROR)</a></h2>
+<p><why>idiomatic error handling.</why></p>
+<p>Where an <code>Error</code> type is owned, it should <code>impl From&lt;Other&gt; for Error {}</code> instead of handling the conversion throughout the code via <code>.map_error()</code>. Calling <code>.map_error()</code> is only appropriate when dealing with foreign error types, or if contextual information needs to be preserved.</p>
+<pre><code class="language-rust ignore">// Bad, repeats the same conversion at every call site and obscures the happy path.
+fn load() -&gt; Result&lt;Config, MyError&gt; {
+    let bytes = read("config.toml").map_err(|e| MyError::Io(e))?;
+    let text = str::from_utf8(&amp;bytes).map_err(|e| MyError::Utf8(e))?;
+    let cfg = toml::from_str(text).map_err(|e| MyError::Parse(e))?;
+    Ok(cfg)
+}
+
+// Good, define the conversion once and let `?` apply it.
+impl From&lt;std::io::Error&gt; for MyError { ... }
+impl From&lt;std::str::Utf8Error&gt; for MyError { ... }
+impl From&lt;toml::de::Error&gt; for MyError { ... }
+
+fn load() -&gt; Result&lt;Config, MyError&gt; {
+    let bytes = read("config.toml")?;
+    let text = str::from_utf8(&amp;bytes)?;
+    let cfg = toml::from_str(text)?;
+    Ok(cfg)
+}</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-INIT-BUILDER"><a class="header" href="#M-INIT-BUILDER">Complex type construction has builders (M-INIT-BUILDER)</a></h2>
+<p><why>future-proof type construction in complex scenarios.</why></p>
+<p>Types that could support 4 or more arbitrary initialization permutations should provide builders. In other words, types with up to
+2 optional initialization parameters can be constructed via inherent methods:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">struct A;
+</span><span class="boring">struct B;
+</span>struct Foo;
+
+// Supports 2 optional construction parameters, inherent methods ok.
+impl Foo {
+    pub fn new() -&gt; Self { Self }
+    pub fn with_a(a: A) -&gt; Self { Self }
+    pub fn with_b(b: B) -&gt; Self { Self }
+    pub fn with_a_b(a: A, b: B) -&gt; Self { Self }
+}
+<span class="boring">}</span></code></pre>
+<p>Beyond that, types should provide a builder:</p>
+<pre><code class="language-rust ignore"><span class="boring">struct A;
+</span><span class="boring">struct B;
+</span><span class="boring">struct C;
+</span><span class="boring">struct Foo;
+</span><span class="boring">struct FooBuilder;
+</span>impl Foo {
+    pub fn new() -&gt; Self { ... }
+    pub fn builder() -&gt; FooBuilder { ... }
+}
+
+impl FooBuilder {
+    pub fn a(mut self, a: A) -&gt; Self { ... }
+    pub fn b(mut self, b: B) -&gt; Self { ... }
+    pub fn c(mut self, c: C) -&gt; Self { ... }
+    pub fn build(self) -&gt; Foo { ... }
+}
+</code></pre>
+<p>The proper name for a builder that builds <code>Foo</code> is <code>FooBuilder</code>. Its methods must be chainable, with the final method called
+<code>.build()</code>. The buildable struct must have a shortcut <code>Foo::builder()</code>, while the builder itself should <em>not</em> have a public
+<code>FooBuilder::new()</code>. Builder methods that set a value <code>x</code> are called <code>x()</code>, not <code>set_x()</code> or similar.</p>
+<h3 id="builders-and-required-parameters"><a class="header" href="#builders-and-required-parameters">Builders and Required Parameters</a></h3>
+<p>Required parameters should be passed when creating the builder, not as setter methods. For builders with multiple required
+parameters, encapsulate them into a parameters struct and use the <code>deps: impl Into&lt;Deps&gt;</code> pattern to provide flexibility:</p>
+<blockquote>
+<p><strong>Note:</strong> A dedicated deps struct is not required if the builder has no required parameters or only a single simple parameter. However,
+for backward compatibility and API evolution, it’s preferable to use a dedicated struct for deps even in simple cases, as it makes it
+easier to add new required parameters in the future without breaking existing code.</p>
+</blockquote>
+<pre><code class="language-rust ignore">#[derive(Debug, Clone)]
+pub struct FooDeps {
+    pub logger: Logger,
+    pub config: Config,
+}
+
+impl From&lt;(Logger, Config)&gt; for FooDeps { ... }
+impl From&lt;Logger&gt; for FooDeps { ... } // In case we could use default Config instance
+
+impl Foo {
+    pub fn builder(deps: impl Into&lt;FooDeps&gt;) -&gt; FooBuilder { ... }
+}</code></pre>
+<p>This pattern allows for convenient usage:</p>
+<ul>
+<li><code>Foo::builder(logger)</code> - when only the logger is needed</li>
+<li><code>Foo::builder((logger, config))</code> - when both parameters are needed</li>
+<li><code>Foo::builder(FooDeps { logger, config })</code> - explicit struct construction</li>
+</ul>
+<p>Alternatively, you can use <a href="https://docs.rs/fundle"><code>fundle</code></a> to simplify the creation of <code>FooDeps</code>:</p>
+<pre><code class="language-rust ignore">#[derive(Debug, Clone)]
+#[fundle::deps]
+pub struct FooDeps {
+    pub logger: Logger,
+    pub config: Config,
+}</code></pre>
+<p>This pattern enables “dependency injection”, see <a href="https://docs.rs/fundle/latest/fundle/attr.deps.html">these docs</a> for more details.</p>
+<h3 id="runtime-specific-builders"><a class="header" href="#runtime-specific-builders">Runtime-Specific Builders</a></h3>
+<p>For types that are runtime-specific or require runtime-specific configuration, provide dedicated builder creation methods that accept the appropriate runtime parameters:</p>
+<pre><code class="language-rust ignore">#[cfg(feature="smol")]
+#[derive(Debug, Clone)]
+pub struct SmolDeps {
+    pub clock: Clock,
+    pub io_context: Context,
+}
+
+#[cfg(feature="tokio")]
+#[derive(Debug, Clone)]
+pub struct TokioDeps {
+    pub clock: Clock,
+}
+
+impl Foo {
+    #[cfg(feature="smol")]
+    pub fn builder_smol(deps: impl Into&lt;SmolDeps&gt;) -&gt; FooBuilder { ... }
+
+    #[cfg(feature="tokio")]
+    pub fn builder_tokio(deps: impl Into&lt;TokioDeps&gt;) -&gt; FooBuilder { ... }
+}</code></pre>
+<p>This approach ensures type safety at compile time and makes the runtime dependency explicit in the API surface. The resulting
+builder methods follow the pattern <code>builder_{runtime}(deps)</code> where <code>{runtime}</code> indicates the specific runtime or execution environment.</p>
+<h3 id="further-reading"><a class="header" href="#further-reading">Further Reading</a></h3>
+<ul>
+<li><a href="https://users.rust-lang.org/t/builder-pattern-in-rust-self-vs-mut-self-and-method-vs-associated-function/72892">Builder pattern in Rust: self vs. &amp;mut self, and method vs. associated function</a></li>
+<li><a href="https://docs.rs/fundle">fundle</a>
+﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></li>
+</ul>
+<h2 id="M-INIT-CASCADED"><a class="header" href="#M-INIT-CASCADED">Complex type initialization hierarchies are cascaded (M-INIT-CASCADED)</a></h2>
+<p><why>construction free of parameter mix-ups.</why></p>
+<p>Types that require 4+ parameters should cascade their initialization via helper types.</p>
+<pre><code class="language-rust ignore"><span class="boring">struct Deposit;
+</span>impl Deposit {
+    // Easy to confuse parameters and signature generally unwieldy.
+    pub fn new(bank_name: &amp;str, customer_name: &amp;str, currency_name: &amp;str, currency_amount: u64) -&gt; Self { }
+}</code></pre>
+<p>Instead of providing a long parameter list, parameters should be grouped semantically. When applying this guideline,
+also check if <a href="https://rust-lang.github.io/api-guidelines/type-safety.html#c-newtype">C-NEWTYPE</a> is applicable:</p>
+<pre><code class="language-rust ignore"><span class="boring">struct Deposit;
+</span><span class="boring">struct Account;
+</span><span class="boring">struct Currency
+</span>impl Deposit {
+    // Better, signature cleaner
+    pub fn new(account: Account, amount: Currency) -&gt; Self { }
+}
+
+impl Account {
+    pub fn new_ok(bank: &amp;str, customer: &amp;str) -&gt; Self { }
+    pub fn new_even_better(bank: Bank, customer: Customer) -&gt; Self { }
+}</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-SERVICES-CLONE"><a class="header" href="#M-SERVICES-CLONE">Services are Clone (M-SERVICES-CLONE)</a></h2>
+<p><why>composable sharing of common services.</why></p>
+<p>Heavyweight <em>service</em> types and ‘thread singletons’ should implement shared-ownership <code>Clone</code> semantics, including any type you expect to be used from your <code>Application::init</code>.</p>
+<p>Per thread, users should essentially be able to create a single resource handler instance, and have it reused by other handlers on the same thread:</p>
+<pre><code class="language-rust ignore">impl ThreadLocal for MyThreadState {
+    fn init(...) -&gt; Self {
+
+        // Create common service instance possibly used by many.
+        let common = ServiceCommon::new();
+
+        // Users can freely pass `common` here multiple times
+        let service_1 = ServiceA::new(&amp;common);
+        let service_2 = ServiceA::new(&amp;common);
+
+        Self { ... }
+    }
+}</code></pre>
+<p>Services then simply clone their dependency and store a new <em>handle</em>, as if <code>ServiceCommon</code> were a shared-ownership smart pointer:</p>
+<pre><code class="language-rust ignore">impl ServiceA {
+    pub fn new(common: &amp;ServiceCommon) -&gt; Self {
+        // If we only need to access `common` from `new` we don't have
+        // to store it. Otherwise, make a clone we store in `Self`.
+        let common = common.clone();
+    }
+}</code></pre>
+<p>Under the hood this <code>Clone</code> should <strong>not</strong> create a fat copy of the entire service. Instead, it should follow the <code>Arc&lt;Inner&gt;</code> pattern:</p>
+<pre><code class="language-rust ignore">// Actual service containing core logic and data.
+struct ServiceCommonInner {}
+
+#[derive(Clone)]
+pub ServiceCommon {
+    inner: Arc&lt;ServiceCommonInner&gt;
+}
+
+impl ServiceCommon {
+    pub fn new() {
+        Self { inner: Arc::new(ServiceCommonInner::new()) }
+    }
+
+    // Method forwards ...
+    pub fn foo(&amp;self) { self.inner.foo() }
+    pub fn bar(&amp;self) { self.inner.bar() }
+}</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-ESSENTIAL-FN-INHERENT"><a class="header" href="#M-ESSENTIAL-FN-INHERENT">Essential functionality should be inherent (M-ESSENTIAL-FN-INHERENT)</a></h2>
+<p><why>easily discoverable essential functionality.</why></p>
+<p>Types should implement core functionality inherently. Trait implementations should forward to inherent functions, and not replace them. Instead of this</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">trait Download {
+</span><span class="boring">    fn download_file(&amp;self, url: impl AsRef&lt;str&gt;);
+</span><span class="boring">}
+</span>struct HttpClient {}
+
+// Offloading essential functionality into traits means users
+// will have to figure out what other traits to `use` to
+// actually use this type.
+impl Download for HttpClient {
+    fn download_file(&amp;self, url: impl AsRef&lt;str&gt;) {
+        // ... logic to download a file
+    }
+}
+<span class="boring">}</span></code></pre>
+<p>do this:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">trait Download {
+</span><span class="boring">    fn download_file(&amp;self, url: impl AsRef&lt;str&gt;);
+</span><span class="boring">}
+</span>struct HttpClient {}
+
+impl HttpClient {
+    fn download_file(&amp;self, url: impl AsRef&lt;str&gt;) {
+        // ... logic to download a file
+    }
+}
+
+// Forward calls to inherent impls. `HttpClient` can be used
+impl Download for HttpClient {
+    fn download_file(&amp;self, url: impl AsRef&lt;str&gt;) {
+        Self::download_file(self, url)
+    }
+}
+<span class="boring">}</span></code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-BALANCED-MODULES"><a class="header" href="#M-BALANCED-MODULES">Modules are balanced in size and scope (M-BALANCED-MODULES)</a></h2>
+<p><why>discoverable functionality and clear API usage.</why></p>
+<p>Your module design should approximately follow established UX practices of menu design: A <em>reasonable</em> number of your most important items should be placed in the crate root, and a comprehensible grouping of the remaining functionality into subordinate modules.</p>
+<p>Two violations of that rule are encountered most frequently: flat module roots containing dozens of items without clear ordering, or the excessive use of submodules without items in the crate root. While there are crates where this makes sense (e.g., automatically generated <code>-sys</code> crates defining 100s of C items, or umbrella crates like <code>std</code> and <code>tokio</code>), the majority of library crates are not among them.</p>
+<p>When designing your module layout, consider these factors:</p>
+<ul>
+<li>Essential items users must find in order to use a crate should go into its root. For example, a <code>foo_client</code> crate should probably have its main <code>Client</code> struct inside the root.</li>
+<li>Other items should be grouped semantically by use case. Modules named <code>traits</code> and <code>errors</code> don’t help anyone, but <code>account</code>, <code>network</code> and <code>status</code> do.</li>
+<li>Also take into account that modules are the perfect place for module-level documentation that further explains the respective subsystem.
+﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></li>
+</ul>
+<h2 id="M-NO-PRELUDE"><a class="header" href="#M-NO-PRELUDE">Don’t define preludes (M-NO-PRELUDE)</a></h2>
+<p><why>a clean namespace and reliable downstream builds.</why></p>
+<p>Crates must not define a <code>prelude</code> or any namespace intended to be imported as <code>use foo::*</code>.</p>
+<p>While the Rust Standard Library successfully uses <a href="https://doc.rust-lang.org/std/prelude/index.html">preludes</a> to define edition items, preludes in crates cause more harm than good. Given today’s IDE support they are not needed, and once multiple preludes are used from different crates there is potential for conflicts:</p>
+<pre><code class="language-rust ignore">use foo::prelude::*;
+use bar::prelude::*;
+use baz::prelude::*;
+
+_ = Client::new();
+
+// error[E0659]: `Client` is ambiguous
+//   --&gt; src/lib.rs:17:13
+//    |
+// 17 |     _ = Client; 
+//    |         ^^^^^^ ambiguous name
+//    |
+//    = note: ambiguous because of multiple glob imports of a name in the same module</code></pre>
+<p>Preludes in particular do not resolve bad module design. If it looks like a prelude would make the crate easier to use or understand, this is almost always an indication that the existing module system needs restructuring, see <a href="./#M-BALANCED-MODULES">M-BALANCED-MODULES</a>.</p>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-PARAMETER-CONSISTENCY"><a class="header" href="#M-PARAMETER-CONSISTENCY">Parameter ordering is consistent (M-PARAMETER-CONSISTENCY)</a></h2>
+<p><why>low development friction.</why></p>
+<p>When the same conceptual parameters appear in multiple functions (within a crate or across crates in the same ecosystem), they should appear in the same order everywhere:</p>
+<ul>
+<li>important or call-specific parameters should generally go first,</li>
+<li>ubiquitous parameters rather go last (e.g., <code>&amp;logger</code>),</li>
+<li>closures always go last (functions should not accept more than one closure).</li>
+</ul>
+<pre><code class="language-rust ignore">// Bad, the order of `user_id` and `tenant_id` flips between functions, and
+// the logger sometimes appears first, sometimes last.
+fn create_user(logger: &amp;Logger, user_id: UserId, tenant_id: TenantId) -&gt; Result&lt;()&gt; { ... }
+fn delete_user(tenant_id: TenantId, user_id: UserId, logger: &amp;Logger) -&gt; Result&lt;()&gt; { ... }
+fn rename_user(user_id: UserId, new_name: &amp;str, tenant_id: TenantId, logger: &amp;Logger) -&gt; Result&lt;()&gt; { ... }
+
+// Good, call-specific parameters first in a consistent order, ubiquitous
+// `logger` always last.
+fn create_user(tenant_id: TenantId, user_id: UserId, logger: &amp;Logger) -&gt; Result&lt;()&gt; { ... }
+fn delete_user(tenant_id: TenantId, user_id: UserId, logger: &amp;Logger) -&gt; Result&lt;()&gt; { ... }
+fn rename_user(tenant_id: TenantId, user_id: UserId, new_name: &amp;str, logger: &amp;Logger) -&gt; Result&lt;()&gt; { ... }</code></pre>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-COLLECTION-TRAITS"><a class="header" href="#M-COLLECTION-TRAITS">Collections implement the appropriate iter traits (M-COLLECTION-TRAITS)</a></h2>
+<p><why>composable collections.</why></p>
+<p>Custom collections should implement the iterator-facing traits the standard library offers.</p>
+<p>Whenever you define a new collection type <code>Collection&lt;T&gt;</code> for consumption by third parties, the following traits and types should also be implemented, <a href="https://cheats.rs/#iterators">see here</a> for more details:</p>
+<ul>
+<li>the structs <code>IntoIter&lt;T&gt;</code>, <code>Iter&lt;T&gt;</code> and <code>IterMut&lt;T&gt;</code>,</li>
+<li>an <code>impl Iterator</code> for all of them,</li>
+<li>the methods <code>c.iter()</code> and <code>c.iter_mut()</code>,</li>
+<li>an <code>impl IntoIterator</code> for <code>Collection&lt;T&gt;</code>, <code>&amp;Collection&lt;T&gt;</code> and <code>&amp;mut Collection&lt;T&gt;</code>,</li>
+<li>an <code>impl FromIterator</code> for <code>Collection&lt;T&gt;</code>,</li>
+<li>an <code>Extend</code> for <code>Collection&lt;T&gt;</code>,</li>
+<li><code>DoubleEndedIterator</code>, <code>ExactSizeIterator</code>, … as applicable</li>
+</ul>
+<p>In addition, make sure you implement <code>size_hint()</code> on all iterators and do so truthfully.</p>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-ASYNC-FN"><a class="header" href="#M-ASYNC-FN">Functions are <code>async</code> over returning a Future (M-ASYNC-FN)</a></h2>
+<p><why>simpler code and easier-to-understand APIs.</why></p>
+<p>Functions should be declared <code>async fn foo()</code> over <code>fn foo() -&gt; impl Future</code> when both are viable.</p>
+<p>Functions marked <code>async</code> are more idiomatic and easier to read. An explicit <code>Future</code>-returning signature should only be used when required, for example inside traits or for <em>hot ’n heavy</em> async functions, compare <a href="../../performance/#M-ASYNC-STACK-SIZE">M-ASYNC-STACK-SIZE</a>.</p>
+<pre><code class="language-rust ignore">impl Foo {
+    // Bad, signature is noisier and the body needs an extra `async` block
+    fn foo() -&gt; impl Future&lt;Output = Result&lt;T, E&gt;&gt; { async { Ok(t) } }
+
+    // Good, method and implementation reads normally
+    async fn foo() -&gt; Result&lt;T, E&gt; { Ok(t) }
+}</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../guidelines/libs/interop/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../guidelines/libs/resilience/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../guidelines/libs/interop/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../guidelines/libs/resilience/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../../mark-09e88c2c.min.js"></script>
+        <script src="../../../searcher-09f2665d.js"></script>
+
+        <script src="../../../clipboard-1626706a.min.js"></script>
+        <script src="../../../highlight-abc7f01d.js"></script>
+        <script src="../../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

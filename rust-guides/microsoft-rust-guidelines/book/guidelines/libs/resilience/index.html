@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Resilience - Pragmatic Rust Guidelines</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style/tags-4fcedefa.css">
+        <link rel="stylesheet" href="../../../style/fixes-0b4cbbb0.css">
+        <link rel="stylesheet" href="../../../style/guideline-meta-343b6e44.css">
+        <link rel="stylesheet" href="../../../style/build-date-66ecebe2.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../../searchindex-3da55094.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../../toc-e8ca1a93.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Pragmatic Rust Guidelines</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/microsoft/rust-guidelines" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h1 id="libraries--resilience-guidelines"><a class="header" href="#libraries--resilience-guidelines">Libraries / Resilience Guidelines</a></h1>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-MOCKABLE-SYSCALLS"><a class="header" href="#M-MOCKABLE-SYSCALLS">I/O and system calls are mockable (M-MOCKABLE-SYSCALLS)</a></h2>
+<p><why>testable edge cases that are otherwise hard to evoke.</why></p>
+<p>Any user-facing type doing I/O, or sys calls with side effects, should be mockable to these effects. This includes file and
+network access, clocks, entropy sources and seeds, and similar. More generally, any operation that is</p>
+<ul>
+<li>non-deterministic,</li>
+<li>reliant on external state,</li>
+<li>depending on the hardware or the environment,</li>
+<li>is otherwise fragile or not universally reproducible</li>
+</ul>
+<p>should be mockable.</p>
+<blockquote>
+<h3 id="mocking-allocations"><a class="header" href="#mocking-allocations"><tip></tip> Mocking Allocations?</a></h3>
+<p>Unless you write kernel code or similar, you can consider allocations to be deterministic, hardware independent and practically
+infallible, thus not covered by this guideline.</p>
+<p>However, this does <em>not</em> mean you should expect there to be unlimited memory available. While it is ok to
+accept caller provided input as-is if your library has a <em>reasonable</em> memory complexity, memory-hungry libraries
+and code handling external input should provide bounded and / or chunking operations.</p>
+</blockquote>
+<p>This guideline has several implications for libraries, they</p>
+<ul>
+<li>should not perform ad-hoc I/O, i.e., call <code>read("foo.txt")</code></li>
+<li>should not rely on non-mockable I/O and sys calls</li>
+<li>should not create their own I/O or sys call <em>core</em> themselves</li>
+<li>should not offer <code>MyIoLibrary::default()</code> constructors</li>
+</ul>
+<p>Instead, libraries performing I/O and sys calls should either accept some I/O <em>core</em> that is mockable already, or provide mocking functionality themselves:</p>
+<pre><code class="language-rust ignore">let lib = Library::new_runtime(runtime_io); // mockable I/O functionality passed in
+let (lib, mock) = Library::new_mocked(); // supports inherent mocking</code></pre>
+<p>Libraries supporting inherent mocking should implement it as follows:</p>
+<pre><code class="language-rust ignore">pub struct Library {
+    some_core: LibraryCore // Encapsulates syscalls, I/O, ... compare below.
+}
+
+impl Library {
+    pub fn new() -&gt; Self { ... }
+    pub fn new_mocked() -&gt; (Self, MockCtrl) { ... }
+}</code></pre>
+<p>Behind the scenes, <code>LibraryCore</code> is a non-public enum, similar to <a href="../ux/#M-RUNTIME-ABSTRACTED">M-RUNTIME-ABSTRACTED</a>, that either dispatches
+calls to the respective sys call, or to an mocking controller.</p>
+<pre><code class="language-rust ignore">// Dispatches calls either to the operating system, or to a
+// mocking controller.
+enum LibraryCore {
+    Native,
+
+    #[cfg(feature = "test-util")]
+    Mocked(mock::MockCtrl)
+}
+
+impl LibraryCore {
+    // Some function you'd forward to the operating system.
+    fn random_u32(&amp;self) {
+        match self {
+            Self::Native =&gt; unsafe { os_random_u32() }
+            Self::Mocked(m) =&gt; m.random_u32()
+        }
+    }
+}
+
+
+#[cfg(feature = "test-util")]
+mod mock {
+    // This follows the M-SERVICES-CLONE pattern, so both `LibraryCore` and
+    // the user can hold on to the same `MockCtrl` instance.
+    pub struct MockCtrl {
+        inner: Arc&lt;MockCtrlInner&gt;
+    }
+
+    // Implement required logic accordingly, usually forwarding to
+    // `MockCtrlInner` below.
+    impl MockCtrl {
+        pub fn set_next_u32(&amp;self, x: u32) { ... }
+        pub fn random_u32(&amp;self) { ... }
+    }
+
+    // Contains actual logic, e.g., the next random number we should return.
+    struct MockCtrlInner {
+        next_call: u32
+    }
+}</code></pre>
+<p>Runtime-aware libraries already build on top of the <a href="../ux/#M-RUNTIME-ABSTRACTED">M-RUNTIME-ABSTRACTED</a> pattern should extend their runtime enum instead:</p>
+<pre><code class="language-rust ignore">enum Runtime {
+    #[cfg(feature="tokio")]
+    Tokio(tokio::Tokio),
+
+    #[cfg(feature="smol")]
+    Smol(smol::Smol)
+
+    #[cfg(feature="test-util")]
+    Mock(mock::MockCtrl)
+}</code></pre>
+<p>As indicated above, most libraries supporting mocking should not accept mock controllers, but return them via parameter tuples,
+with the first parameter being the library instance, the second the mock controller. This is to prevent state ambiguity if multiple
+instances shared a single controller:</p>
+<pre><code class="language-rust ignore">impl Library {
+    pub fn new_mocked() -&gt; (Self, MockCtrl) { ... } // good
+    pub fn new_mocked_bad(&amp;mut MockCtrl) -&gt; Self { ... } // prone to misuse
+}</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-TEST-UTIL"><a class="header" href="#M-TEST-UTIL">Test utilities are feature gated (M-TEST-UTIL)</a></h2>
+<p><why>production builds that cannot bypass safety checks.</why></p>
+<p>Testing functionality must be guarded behind a feature flag. This includes</p>
+<ul>
+<li>mocking functionality (<a href="./#M-MOCKABLE-SYSCALLS">M-MOCKABLE-SYSCALLS</a>),</li>
+<li>the ability to inspect sensitive data,</li>
+<li>safety check overrides,</li>
+<li>fake data generation.</li>
+</ul>
+<p>We recommend you use a single flag only, named <code>test-util</code>. In any case, the feature(s) must clearly communicate they are for testing purposes.</p>
+<pre><code class="language-rust ignore">impl HttpClient {
+    pub fn get() { ... }
+
+    #[cfg(feature = "test-util")]
+    pub fn bypass_certificate_checks() { ... }
+}</code></pre>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-INTEGRATION-TESTS"><a class="header" href="#M-INTEGRATION-TESTS">Integration tests live under <code>tests/</code> (M-INTEGRATION-TESTS)</a></h2>
+<p><why>clean code files.</why></p>
+<p>Tests that only touch public API surface are <em>integration tests</em> and belong under <code>tests/</code>, not <code>mod tests {}</code>.</p>
+<p>In projects with coverage targets, it is not uncommon for <code>src/</code> files to contain more testing code than actual business logic. This can make browsing and understanding the code harder both in IDEs and PRs. Likewise, if a testing goal can be achieved through either an integration test or a unit test, the former is always preferred.
+﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-STRONG-TYPES"><a class="header" href="#M-STRONG-TYPES">Use the proper type family (M-STRONG-TYPES)</a></h2>
+<p><why>the right data and safety invariants, at the right time.</why></p>
+<p>Use the appropriate <code>std</code> type for your task. In general you should use the strongest type available, as early as possible in your API flow. Common offenders are</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Do not use …</th><th>use instead …</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td><code>String</code>*</td><td><code>PathBuf</code>*</td><td>Anything dealing with the OS should be <code>Path</code>-like</td></tr>
+</tbody>
+</table>
+</div>
+<p>That said, you should also follow common Rust <code>std</code> conventions. Purely numeric types at public API boundaries (e.g., <code>window_size()</code>) are expected to
+be regular numbers, not <code>Saturating&lt;usize&gt;</code>, <code>NonZero&lt;usize&gt;</code>, or similar.</p>
+<footnotes>
+<p><sup>*</sup> Including their siblings, e.g., <code>&amp;str</code>, <code>Path</code>, …</p>
+</footnotes>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-STRONG-TYPES-GUARD"><a class="header" href="#M-STRONG-TYPES-GUARD">Newtypes guard their invariants (M-STRONG-TYPES-GUARD)</a></h2>
+<p><why>centralized correctness invariants.</why></p>
+<p>When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, …), the type itself must enforce that invariant where applicable.</p>
+<p>Construction should be fallible, returning a proper error when the invariant cannot be upheld, rather than handing the responsibility off to every user:</p>
+<pre><code class="language-rust ignore">// Bad, creates a new type but enforces nothing. Every caller now has to
+// re-check that the value is actually a valid month, defeating the point of
+// having a dedicated type.
+pub struct Month(pub u8);
+
+impl Month {
+    pub fn new(value: u8) -&gt; Self { ... }
+}
+
+
+// Good, the invariant (1..=12) is checked once, at the boundary, and
+// every later use of `Month` can rely on it.
+pub struct Month(u8);
+
+impl Month {
+    pub fn from_u8(value: u8) -&gt; Result&lt;Self, DateError&gt; { ... }
+}</code></pre>
+<p>This means for any newtype that is non-total:</p>
+<ul>
+<li>It must have at least one fallible constructor (e.g., <code>fn from_foo(...) -&gt; Result&lt;Self, _&gt;</code>).</li>
+<li>Additional panicking constructors are allowed (e.g., <code>new</code>), and should preferably be <code>const</code>.</li>
+<li>Conversions from weaker types into the newtype must be fallible (<code>TryFrom</code>/<code>FromStr</code>).</li>
+<li>Infallible <code>From</code> implementations may not be offered.</li>
+</ul>
+<blockquote>
+<h3 id="why-const"><a class="header" href="#why-const"><tip></tip> Why <code>const</code>?</a></h3>
+<p>Const constructors allows them to be used inside <code>const {}</code> blocks, which surfaces these violations as errors. This enables
+users to do <code>let month_due = const { Month::new(14) }</code> and avoids hitting these paths during runtime.</p>
+</blockquote>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-BUILD-RESULT"><a class="header" href="#M-BUILD-RESULT">Builders validate in final <code>.build()</code> (M-BUILD-RESULT)</a></h2>
+<p><why>clean builder error handling.</why></p>
+<p>A builder’s per-field setters should accept input without failing, final validation should be done by <code>.build()</code>.</p>
+<p>Fallible setters add noise, and still don’t guard against interdependent error conditions. Where builders are fallible they should offer a <code>Result</code>-carrying <code>.build()</code> instead.</p>
+<pre><code class="language-rust ignore">// Bad, forces repeated error checks that provide no value.
+Foo::builder()
+    .name("Foo")?
+    .distance(42)?
+    .build();
+
+// Good, consolidates sanity checking and allows for cross-checks 
+// between properties.
+Foo::builder()
+    .name("Foo")
+    .distance(42)
+    .build()?;</code></pre>
+<p>That said, individual settings should prefer strong types carrying their own validation where applicable, compare M-STRONG-TYPES-GUARD.
+﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-NO-GLOB-REEXPORTS"><a class="header" href="#M-NO-GLOB-REEXPORTS">Don’t glob re-export items (M-NO-GLOB-REEXPORTS)</a></h2>
+<p><why>a deliberate public surface.</why></p>
+<p>Don’t <code>pub use foo::*</code> from other modules, especially not from other crates. You might accidentally export more than you want,
+and globs are hard to review in PRs. Re-export items individually instead:</p>
+<pre><code class="language-rust ignore">pub use foo::{A, B, C};</code></pre>
+<p>Glob exports are permissible for technical reasons, like doing platform specific re-exports from a set of HAL (hardware abstraction layer) modules:</p>
+<pre><code class="language-rust ignore">#[cfg(target_os = "windows")]
+mod windows { /* ... */ }
+
+#[cfg(target_os = "linux")]
+mod linux { /* ... */ }
+
+// Acceptable use of glob re-exports, this is a common pattern
+// and it is clear everything is just forwarded from a single 
+// platform.
+
+#[cfg(target_os = "windows")]
+pub use windows::*;
+
+#[cfg(target_os = "linux")]
+pub use linux::*;</code></pre>
+<p>﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. --></p>
+<h2 id="M-AVOID-STATICS"><a class="header" href="#M-AVOID-STATICS">Avoid statics (M-AVOID-STATICS)</a></h2>
+<p><why>consistency and correctness across crate versions.</why></p>
+<p>Libraries should avoid <code>static</code> and thread-local items, if a consistent view of the item is relevant for correctness.
+Essentially, any code that would be incorrect if the static <em>magically</em> had another value must not use them. Statics
+only used for performance optimizations are ok.</p>
+<p>The fundamental issue with statics in Rust is the secret duplication of state.</p>
+<p>Consider a crate <code>core</code> with the following function:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span><span class="boring">use std::sync::atomic::AtomicUsize;
+</span><span class="boring">use std::sync::atomic::Ordering;
+</span>static GLOBAL_COUNTER: AtomicUsize = AtomicUsize::new(0);
+
+pub fn increase_counter() -&gt; usize {
+    GLOBAL_COUNTER.fetch_add(1, Ordering::Relaxed)
+}
+<span class="boring">}</span></code></pre>
+<p>Now assume you have a crate <code>main</code>, calling two libraries <code>library_a</code> and <code>library_b</code>, each invoking that counter:</p>
+<pre><code class="language-rust ignore">// Increase global static counter 2 times
+library_a::count_up();
+library_a::count_up();
+
+// Increase global static counter 3 more times
+library_b::count_up();
+library_b::count_up();
+library_b::count_up();</code></pre>
+<p>They eventually report their result:</p>
+<pre><code class="language-rust ignore">library_a::print_counter();
+library_b::print_counter();
+main::print_counter();</code></pre>
+<p>At this point, what is <em>the</em> value of said counter; <code>0</code>, <code>2</code>, <code>3</code> or <code>5</code>?</p>
+<p>The answer is, possibly any  (even multiple!) of the above, depending on the crate’s version resolution!</p>
+<p>Under the hood Rust may link to multiple versions of the same crate, independently instantiated, to satisfy declared
+dependencies. This is especially observable during a crate’s <code>0.x</code> version timeline, where each <code>x</code> constitutes a separate <em>major</em> version.</p>
+<p>If <code>main</code>,  <code>library_a</code> and <code>library_b</code> all declared the same version of <code>core</code>, e.g. <code>0.5</code>, then the reported result will be <code>5</code>, since all
+crates actually <em>see</em> the same version of <code>GLOBAL_COUNTER</code>.</p>
+<p>However, if <code>library_a</code> declared <code>0.4</code> instead, then it would be linked against a separate version of <code>core</code>; thus <code>main</code> and <code>library_b</code> would
+agree on a value of <code>3</code>, while <code>library_a</code> reported <code>2</code>.</p>
+<p>Although <code>static</code> items can be useful, they are particularly dangerous before a library’s stabilization, and for any state where <em>secret duplication</em> would
+cause consistency issues when static and non-static variable use interacts. In addition, statics interfere with unit testing, and are a contention point in
+thread-per-core designs.</p>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<h2 id="M-LOG-NOT-PRINT"><a class="header" href="#M-LOG-NOT-PRINT">Production code uses telemetry, not println (M-LOG-NOT-PRINT)</a></h2>
+<p><why>diagnostics available where they are needed.</why></p>
+<p>Production code paths should emit diagnostics through the project’s telemetry framework rather than via <code>println!</code> or <code>dbg!</code>. Console output is reserved for CLIs that intentionally write to stdout as their user interface.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../guidelines/libs/ux/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../guidelines/libs/building/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../guidelines/libs/ux/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../guidelines/libs/building/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../../mark-09e88c2c.min.js"></script>
+        <script src="../../../searcher-09f2665d.js"></script>
+
+        <script src="../../../clipboard-1626706a.min.js"></script>
+        <script src="../../../highlight-abc7f01d.js"></script>
+        <script src="../../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
